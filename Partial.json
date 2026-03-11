@@ -3663,6 +3663,7 @@
             "DeleteCapture",
             "DeleteVideoCapture",
             "GetDeviceInfo",
+            "GetScreenshotCaptureObject",
             "IsCapturingVideo",
             "OnCaptureBegan",
             "OnCaptureEnded",
@@ -9582,8 +9583,11 @@
         },
         "Methods": [
             "TweenPosition",
+            "TweenPositionInternal",
             "TweenSize",
-            "TweenSizeAndPosition"
+            "TweenSizeAndPosition",
+            "TweenSizeAndPositionInternal",
+            "TweenSizeInternal"
         }
     },
     "TeamCreatePublishService": {
@@ -14035,6 +14039,7 @@
         "Properties": [
             "Guid",
             "GuidBinaryString",
+            "Length",
             "Loop",
             "Priority"
         },
@@ -15138,7 +15143,11 @@
         "Name": "UICorner",
         "Superclass": "UIComponent",
         "Properties": [
-            "CornerRadius"
+            "BottomLeftRadius",
+            "BottomRightRadius",
+            "CornerRadius",
+            "TopLeftRadius",
+            "TopRightRadius"
         },
         "Events": [
             
