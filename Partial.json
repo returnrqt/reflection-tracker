@@ -529,7 +529,6 @@
         "Events": [
             "FixedRateTick",
             "Misprediction",
-            "Rollback",
             "Step"
         },
         "Methods": [
@@ -8384,6 +8383,7 @@
             "GetFacsDrivenJointNamesFromEditableMesh",
             "GetImageTransparencyWithByteString",
             "GetMaximalJointDistancesWithinFacs",
+            "GetMinAndMaxMeshSizeAcrossAllFacs",
             "GetPropertyValue",
             "GetSkinnedJointNamesFromEditableMesh",
             "IsEditableMeshNumCoplanarIntersectionsOverLimit",
@@ -11393,6 +11393,7 @@
             "PreSimulation",
             "RenderStepped",
             "RobloxGuiFocusedChanged",
+            "Rollback",
             "Stepped"
         },
         "Methods": [
@@ -14242,6 +14243,7 @@
             "RigScale",
             "RigType",
             "RigVisualization",
+            "ScaleFactor",
             "ScaleUnit",
             "UseSceneOriginAsPivot",
             "UsesCages",
