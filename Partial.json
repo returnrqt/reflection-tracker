@@ -4761,6 +4761,7 @@
         "Name": "AnimationRigData",
         "Superclass": "Instance",
         "Properties": [
+            "Generic",
             "label",
             "name",
             "parent",
