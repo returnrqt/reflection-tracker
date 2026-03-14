@@ -295,14 +295,13 @@
         "Name": "AvatarAbilityRules",
         "Superclass": "Instance",
         "Properties": [
+            "CharacterControllerMode",
             "EnableClimbing",
-            "EnableCrouching",
+            "EnableFallingDown",
+            "EnableGettingUp",
             "EnableJumping",
             "EnableRunning",
             "EnableSitting",
-            "EnableSprinting",
-            "EnableStrafing",
-            "EnableStumbling",
             "EnableSwimming"
         },
         "Events": [
@@ -817,6 +816,7 @@
             "HandleSelfieConsentResult",
             "HandleSelfieQRResult",
             "AutoSetupAvatarAsync",
+            "CreateCageMeshPartsWithScaleForExportAsync",
             "GenerateAvatar2DPreviewAsync",
             "GenerateAvatarAsync",
             "GetBatchTokenDetailsAsync",
