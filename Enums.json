@@ -2418,6 +2418,8 @@
     "Enum.StreamingPauseMode.ClientPhysicsPause",
     "Enum.StrokeSizingMode.FixedSize",
     "Enum.StrokeSizingMode.ScaledSize",
+    "Enum.StudioCaptureScreenshotFormat.RGBA8",
+    "Enum.StudioCaptureScreenshotFormat.PNG",
     "Enum.StudioCloseMode.None",
     "Enum.StudioCloseMode.CloseStudio",
     "Enum.StudioCloseMode.CloseDoc",
