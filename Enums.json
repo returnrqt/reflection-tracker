@@ -1894,6 +1894,8 @@
     "Enum.PathfindingUseImprovedSearch.Enabled",
     "Enum.PeoplePageLayout.Card",
     "Enum.PeoplePageLayout.List",
+    "Enum.PhysicalConstraintType.AnimationConstraint",
+    "Enum.PhysicalConstraintType.Motor6D",
     "Enum.PhysicsSimulationRate.Fixed240Hz",
     "Enum.PhysicsSimulationRate.Fixed120Hz",
     "Enum.PhysicsSimulationRate.Fixed60Hz",
