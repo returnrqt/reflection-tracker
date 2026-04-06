@@ -2352,6 +2352,7 @@
     "Enum.SelfViewPosition.BottomRight",
     "Enum.SensorMode.Floor",
     "Enum.SensorMode.Ladder",
+    "Enum.SensorMode.ClassicLadder",
     "Enum.SensorUpdateType.OnRead",
     "Enum.SensorUpdateType.Manual",
     "Enum.ServerLiveEditingMode.Uninitialized",
