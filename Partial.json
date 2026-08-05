@@ -6093,6 +6093,7 @@
             
         ],
         "Methods": [
+            "GetAvailableTintModes",
             "GetTintMode",
             "SetTintMode"
         ]
@@ -15747,6 +15748,7 @@
             "PropertyStatusStudio",
             "RobloxLocked",
             "Sandboxed",
+            "SerializedOverrides",
             "SourceAssetId",
             "Tags",
             "UniqueId",
