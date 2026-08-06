@@ -619,8 +619,6 @@
         "Properties": [
             "Workspace",
             "workspace",
-            "GameAvatarType",
-            "R15CollisionType",
             "CreatorId",
             "CreatorType",
             "Environment",
@@ -640,7 +638,9 @@
             "VIPServerId",
             "VIPServerOwnerId",
             "lighting",
-            "RunService"
+            "RunService",
+            "GameAvatarType",
+            "R15CollisionType"
         ],
         "Events": [
             "AllowedGearTypeChanged",
@@ -5013,6 +5013,7 @@
             "DrawRectangle",
             "DrawTriangle",
             "ReadPixelsBuffer",
+            "SampleImageProjected",
             "WritePixelsBuffer"
         ]
     },
@@ -5346,7 +5347,6 @@
             "AvatarUnificationMode",
             "ClientAnimatorThrottling",
             "CollisionGroups",
-            "ConvexDecompCompressed",
             "CurrentCamera",
             "DataModelPlaceVersion",
             "DistributedGameTime",
