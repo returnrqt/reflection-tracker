@@ -8795,6 +8795,7 @@
             "IsConnected"
         ],
         "Events": [
+            "AudioInputRequested",
             "OnMessage",
             "WiringChanged"
         ],
@@ -9330,6 +9331,7 @@
             "FillRegionSlot",
             "FillWedge",
             "FillWedgeSlot",
+            "GenerateWaterFlowMap",
             "GetCell",
             "GetMaterialColor",
             "GetMaterialSlot",
@@ -9345,6 +9347,7 @@
             "ReplaceMaterialInTransform",
             "ReplaceMaterialInTransformSubregion",
             "ResetMaterialSlot",
+            "ResetWaterFlowMap",
             "SetCell",
             "SetCells",
             "SetMaterialColor",
