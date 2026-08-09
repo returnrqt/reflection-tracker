@@ -882,6 +882,8 @@
         ],
         "Methods": [
             "DecodeAvatarMovementProto",
+            "ReportBuildUIClose",
+            "ReportBuildUIOpen",
             "ReportCapturesUIClose",
             "ReportCapturesUIOpen",
             "ReportChatLineReportingClose",
@@ -10060,6 +10062,7 @@
             "OnUnhide"
         ],
         "Methods": [
+            "TriggerOnPageMilestone",
             "GetCurrentState",
             "IsDidDetachSupported",
             "TriggerOnLandingPageMount",
