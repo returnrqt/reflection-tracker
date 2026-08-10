@@ -619,8 +619,6 @@
         "Properties": [
             "Workspace",
             "workspace",
-            "GameAvatarType",
-            "R15CollisionType",
             "CreatorId",
             "CreatorType",
             "Environment",
@@ -639,8 +637,10 @@
             "PrivateServerOwnerId",
             "VIPServerId",
             "VIPServerOwnerId",
+            "RunService",
             "lighting",
-            "RunService"
+            "GameAvatarType",
+            "R15CollisionType"
         ],
         "Events": [
             "AllowedGearTypeChanged",
@@ -4775,8 +4775,7 @@
             "IsAccountSwitchingSupported",
             "IsChatRestrictionSupported",
             "IsSingleSignOnSupported",
-            "ShowAccountPicker",
-            "RegisterActiveUser"
+            "ShowAccountPicker"
         ]
     },
     "CacheableContentProvider": {
@@ -4939,6 +4938,7 @@
             
         ],
         "Methods": [
+            "Dump",
             "GetLabels",
             "GetNames",
             "GetParents",
@@ -5013,6 +5013,7 @@
             "DrawRectangle",
             "DrawTriangle",
             "ReadPixelsBuffer",
+            "SampleImageProjected",
             "WritePixelsBuffer"
         ]
     },
@@ -5346,7 +5347,6 @@
             "AvatarUnificationMode",
             "ClientAnimatorThrottling",
             "CollisionGroups",
-            "ConvexDecompCompressed",
             "CurrentCamera",
             "DataModelPlaceVersion",
             "DistributedGameTime",
@@ -5732,13 +5732,13 @@
         "Name": "QWidgetPluginGui",
         "Superclass": "PluginGui",
         "Properties": [
-            "PopoverParent"
+            
         ],
         "Events": [
             
         ],
         "Methods": [
-            "ResetPopoverAttachment"
+            
         ]
     },
     "BoolValue": {
@@ -6093,6 +6093,7 @@
             
         ],
         "Methods": [
+            "GetAvailableTintModes",
             "GetTintMode",
             "SetTintMode"
         ]
@@ -6149,6 +6150,21 @@
             "SetPrimaryPart"
         ]
     },
+    "WrapDeformer": {
+        "Name": "WrapDeformer",
+        "Superclass": "BaseWrap",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            "SetCageMeshContent",
+            "CreateEditableMeshAsync",
+            "GetDeformedCFrameAsync"
+        ]
+    },
     "SelectionLasso": {
         "Name": "SelectionLasso",
         "Superclass": "GuiBase3d",
@@ -6174,21 +6190,6 @@
         ],
         "Methods": [
             "GetSamplesAtTimesAsync"
-        ]
-    },
-    "WrapDeformer": {
-        "Name": "WrapDeformer",
-        "Superclass": "BaseWrap",
-        "Properties": [
-            
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            "SetCageMeshContent",
-            "CreateEditableMeshAsync",
-            "GetDeformedCFrameAsync"
         ]
     },
     "WrapDeformMeshProvider": {
@@ -6297,6 +6298,19 @@
             
         ]
     },
+    "Weld": {
+        "Name": "Weld",
+        "Superclass": "JointInstance",
+        "Properties": [
+            "EnableSkinning"
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
+        ]
+    },
     "RemoteEvent": {
         "Name": "RemoteEvent",
         "Superclass": "BaseRemoteEvent",
@@ -6314,11 +6328,11 @@
             "FireServer"
         ]
     },
-    "Weld": {
-        "Name": "Weld",
-        "Superclass": "JointInstance",
+    "WedgePart": {
+        "Name": "WedgePart",
+        "Superclass": "FormFactorPart",
         "Properties": [
-            "EnableSkinning"
+            
         ],
         "Events": [
             
@@ -6340,17 +6354,22 @@
             "Disconnect"
         ]
     },
-    "WedgePart": {
-        "Name": "WedgePart",
-        "Superclass": "FormFactorPart",
+    "WebViewService": {
+        "Name": "WebViewService",
+        "Superclass": "Instance",
         "Properties": [
             
         ],
         "Events": [
-            
+            "OnJavaScriptCall",
+            "OnWindowClosed"
         ],
         "Methods": [
-            
+            "CloseWindow",
+            "MutateWindow",
+            "OpenWindow",
+            "OpenWindowV2",
+            "IsAvailable"
         ]
     },
     "ExecutedRemoteCommand": {
@@ -6402,24 +6421,6 @@
             "GetKeyframeSequenceAsync"
         ]
     },
-    "WebViewService": {
-        "Name": "WebViewService",
-        "Superclass": "Instance",
-        "Properties": [
-            
-        ],
-        "Events": [
-            "OnJavaScriptCall",
-            "OnWindowClosed"
-        ],
-        "Methods": [
-            "CloseWindow",
-            "MutateWindow",
-            "OpenWindow",
-            "OpenWindowV2",
-            "IsAvailable"
-        ]
-    },
     "SurfaceSelection": {
         "Name": "SurfaceSelection",
         "Superclass": "PartAdornment",
@@ -6464,19 +6465,6 @@
             "FromHeightmapAsync",
             "NormalizeAsync",
             "UnclampAsync"
-        ]
-    },
-    "TextBoxService": {
-        "Name": "TextBoxService",
-        "Superclass": "Instance",
-        "Properties": [
-            
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            
         ]
     },
     "VoiceChatService": {
@@ -6558,20 +6546,17 @@
             "IsVoiceEnabledForUserIdAsync"
         ]
     },
-    "MicroProfilerService": {
-        "Name": "MicroProfilerService",
+    "TextBoxService": {
+        "Name": "TextBoxService",
         "Superclass": "Instance",
         "Properties": [
-            "ContextLabel"
+            
         ],
         "Events": [
-            "DataChanged"
+            
         ],
         "Methods": [
-            "GetDataInRange",
-            "GetDataSize",
-            "ProcessCommand",
-            "DumpToFileAsync"
+            
         ]
     },
     "Terrain": {
@@ -6654,9 +6639,24 @@
             "WriteVoxelChannels",
             "WriteVoxels",
             "WriteVoxelsAsync_beta",
-            "WriteVoxelsSlot",
             "DrawBufferAsync",
             "ReadBufferAsync"
+        ]
+    },
+    "MicroProfilerService": {
+        "Name": "MicroProfilerService",
+        "Superclass": "Instance",
+        "Properties": [
+            "ContextLabel"
+        ],
+        "Events": [
+            "DataChanged"
+        ],
+        "Methods": [
+            "GetDataInRange",
+            "GetDataSize",
+            "ProcessCommand",
+            "DumpToFileAsync"
         ]
     },
     "VisualizationMode": {
@@ -6666,6 +6666,19 @@
             "Enabled",
             "Title",
             "ToolTip"
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
+        ]
+    },
+    "Visit": {
+        "Name": "Visit",
+        "Superclass": "Instance",
+        "Properties": [
+            
         ],
         "Events": [
             
@@ -6702,8 +6715,8 @@
             "GetScheduledNotifications"
         ]
     },
-    "Visit": {
-        "Name": "Visit",
+    "VisibilityCheckDispatcher": {
+        "Name": "VisibilityCheckDispatcher",
         "Superclass": "Instance",
         "Properties": [
             
@@ -6784,8 +6797,8 @@
             
         ]
     },
-    "VisibilityCheckDispatcher": {
-        "Name": "VisibilityCheckDispatcher",
+    "VirtualUser": {
+        "Name": "VirtualUser",
         "Superclass": "Instance",
         "Properties": [
             
@@ -6794,7 +6807,19 @@
             
         ],
         "Methods": [
-            
+            "Button1Down",
+            "Button1Up",
+            "Button2Down",
+            "Button2Up",
+            "CaptureController",
+            "ClickButton1",
+            "ClickButton2",
+            "MoveMouse",
+            "SetKeyDown",
+            "SetKeyUp",
+            "StartRecording",
+            "StopRecording",
+            "TypeKey"
         ]
     },
     "UniversalConstraint": {
@@ -6841,9 +6866,9 @@
             "Play"
         ]
     },
-    "VirtualUser": {
-        "Name": "VirtualUser",
-        "Superclass": "Instance",
+    "ViewportCamera": {
+        "Name": "ViewportCamera",
+        "Superclass": "Camera",
         "Properties": [
             
         ],
@@ -6851,19 +6876,7 @@
             
         ],
         "Methods": [
-            "Button1Down",
-            "Button1Up",
-            "Button2Down",
-            "Button2Up",
-            "CaptureController",
-            "ClickButton1",
-            "ClickButton2",
-            "MoveMouse",
-            "SetKeyDown",
-            "SetKeyUp",
-            "StartRecording",
-            "StopRecording",
-            "TypeKey"
+            
         ]
     },
     "DoubleConstrainedValue": {
@@ -8498,6 +8511,7 @@
             "DisplayName",
             "FollowUserId",
             "FollowUserIdReplicated",
+            "FrustumStreaming",
             "GameplayPaused",
             "Guest",
             "HasRobloxSubscription",
@@ -10033,8 +10047,6 @@
             "GetHarmonyQualityLevel",
             "GetMemoryCategoryNames",
             "GetMemoryUsageMbAllCategories",
-            "GetMemoryUsageMbAllCategoriesFiltered",
-            "GetMemoryUsageMbFiltered",
             "GetMemoryUsageMbForTag",
             "GetTotalMemoryUsageMb",
             "ResetHarmonyMemoryTarget",
@@ -12758,7 +12770,6 @@
             "Title"
         ],
         "Events": [
-            "Dismissed",
             "InputBegan",
             "InputChanged",
             "InputEnded",
@@ -12774,7 +12785,6 @@
         ],
         "Methods": [
             "BindToClose",
-            "Dismiss",
             "GetRelativeMousePosition"
         ]
     },
@@ -15750,6 +15760,7 @@
             "PropertyStatusStudio",
             "RobloxLocked",
             "Sandboxed",
+            "SerializedOverrides",
             "SourceAssetId",
             "Tags",
             "UniqueId",
