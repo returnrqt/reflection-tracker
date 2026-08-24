@@ -5719,7 +5719,6 @@
             "AddProfilingCheckpoint",
             "Click",
             "ClickTexture",
-            "ClickWithProfileFrame",
             "ExportAnimationGltf",
             "ExportGltf",
             "GetThumbnailModule",
