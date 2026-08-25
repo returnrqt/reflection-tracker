@@ -2451,6 +2451,8 @@
     "Enum.ScrollBarInset.None",
     "Enum.ScrollBarInset.ScrollBar",
     "Enum.ScrollBarInset.Always",
+    "Enum.ScrollState.Idle",
+    "Enum.ScrollState.Scrolling",
     "Enum.ScrollingDirection.X",
     "Enum.ScrollingDirection.Y",
     "Enum.ScrollingDirection.XY",
