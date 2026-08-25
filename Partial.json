@@ -1366,6 +1366,7 @@
         ],
         "Events": [
             "BroadcastRemoteCursorPositions",
+            "BroadcastRemoteCursorPositionsWithConnectionId",
             "RequestAllRemoteCursorPositionForScript",
             "UpdateClientRemoteCursorPosition"
         ],
@@ -3198,6 +3199,7 @@
             "OpenStyleEditor",
             "PurchasePromptShown",
             "SafeZoneOffsetsChanged",
+            "ScrollStateChanged",
             "ShowLeaveConfirmation",
             "SpecialKeyPressed",
             "UiMessageChanged"
@@ -6191,8 +6193,13 @@
         "Name": "WorldRoot",
         "Superclass": "Model",
         "Properties": [
+            "AutoSimulate",
             "CollisionGroupData",
-            "PhysicsStepTime"
+            "GravityDirection",
+            "PhysicsStepTime",
+            "SimulationRate",
+            "Wind",
+            "WindDirection"
         ],
         "Events": [
             "CollisionGroupCollidableChanged"
@@ -6230,6 +6237,7 @@
             "RenameCollisionGroup",
             "SetInsertPoint",
             "Shapecast",
+            "Simulate",
             "Spherecast",
             "StepPhysics",
             "UnregisterCollisionGroup",
