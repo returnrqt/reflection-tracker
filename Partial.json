@@ -6254,6 +6254,19 @@
             
         ]
     },
+    "WrapContentProvider": {
+        "Name": "WrapContentProvider",
+        "Superclass": "CacheableContentProvider",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
+        ]
+    },
     "PluginMouse": {
         "Name": "PluginMouse",
         "Superclass": "Mouse",
