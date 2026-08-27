@@ -4113,7 +4113,7 @@
         ],
         "Methods": [
             "CalculateConstraintsToPreserve",
-            "CreateSolidPrimitive",
+            "CreateBasicMeshPart",
             "GenerateFragmentSites",
             "TranscodeMesh",
             "TranscodeModel",
@@ -8433,10 +8433,24 @@
             
         ],
         "Events": [
-            
+            "MergeStateChanged",
+            "MergeStateCleared",
+            "MergeStatusChanged"
         ],
         "Methods": [
-            
+            "CompleteMerge",
+            "GetInstanceConflicts",
+            "GetMergeChanges",
+            "GetMergeResolution",
+            "GetMergeStatus",
+            "SetMergeResolution",
+            "ArchiveBranchAsync",
+            "CreateBranchAsync",
+            "GetBranchesAsync",
+            "GetDiffAsync",
+            "RestoreBranchAsync",
+            "StartMergeAsync",
+            "UpdateBranchAsync"
         ]
     },
     "ScriptRuntime": {
