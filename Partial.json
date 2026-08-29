@@ -1484,7 +1484,9 @@
             "BroadcastRemoteCursorPositions",
             "BroadcastRemoteCursorPositionsWithConnectionId",
             "RequestAllRemoteCursorPositionForScript",
-            "UpdateClientRemoteCursorPosition"
+            "RequestAllRemoteCursorPositionForScriptWithUri",
+            "UpdateClientRemoteCursorPosition",
+            "UpdateClientRemoteCursorPositionWithUri"
         ],
         "Methods": [
             
@@ -1727,6 +1729,7 @@
         "Name": "Folder",
         "Superclass": "Instance",
         "Properties": [
+            "IconTint",
             "ReplicatedGuiInsertionOrder"
         ],
         "Events": [
@@ -11935,6 +11938,7 @@
             "Stepped"
         ],
         "Methods": [
+            "BindToAnimation",
             "BindToRenderStep",
             "BindToSimulation",
             "GetControlAndVariantRolloutFlags",
@@ -12169,6 +12173,7 @@
         "Methods": [
             "ConnectAsync",
             "DisconnectAsync",
+            "ExportInstanceToGlbAsync",
             "ExportMeshToGlbAsync",
             "GenerateMeshAsync",
             "GenerateModelAsync",
