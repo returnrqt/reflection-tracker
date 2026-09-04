@@ -2234,6 +2234,8 @@
     "Enum.ProximityPromptStyle.Custom",
     "Enum.PurchaseOption.TimedOption",
     "Enum.PurchaseOption.Permanent",
+    "Enum.QueueDecision.Commit",
+    "Enum.QueueDecision.Defer",
     "Enum.R15CollisionType.OuterBox",
     "Enum.R15CollisionType.InnerBox",
     "Enum.RaycastFilterType.Exclude",
