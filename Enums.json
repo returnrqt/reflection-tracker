@@ -170,6 +170,7 @@
     "Enum.AnimationNodeType.SequenceNode",
     "Enum.AnimationNodeType.SpeedNode",
     "Enum.AnimationNodeType.SubtractNode",
+    "Enum.AnimationNodeType.StateMachineNode",
     "Enum.AnimationNodeWaitFor.Finished",
     "Enum.AnimationNodeWaitFor.Trigger",
     "Enum.AnimationPriority.Idle",
