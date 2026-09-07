@@ -10869,7 +10869,10 @@
         "Name": "StateMachineTransitionDefinition",
         "Superclass": "Instance",
         "Properties": [
-            
+            "From",
+            "Priority",
+            "To",
+            "TransitionId"
         ],
         "Events": [
             
