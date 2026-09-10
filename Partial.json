@@ -3695,7 +3695,8 @@
         "Superclass": "Instance",
         "Properties": [
             "AddPlayersOnJoin",
-            "DirectChatRequester"
+            "DirectChatRequester",
+            "IsDefaultTextChannel"
         ],
         "Events": [
             "MessageReceived"
@@ -9364,6 +9365,7 @@
             "ReplaceMaterial",
             "ReplaceMaterialInTransform",
             "ReplaceMaterialInTransformSubregion",
+            "ReplaceMaterialInTransformSubregionSlot",
             "ResetMaterialSlot",
             "ResetWaterFlowMap",
             "SetCell",
@@ -9371,6 +9373,7 @@
             "SetMaterialColor",
             "SetMaterialInTransform",
             "SetMaterialInTransformSubregion",
+            "SetMaterialInTransformSubregionSlot",
             "SetMaterialSlot",
             "SetWaterCell",
             "SmoothRegion",
@@ -10358,6 +10361,7 @@
             "FontFace",
             "HeightScale",
             "HorizontalAlignment",
+            "TextChannelDisplayMode",
             "TextColor3",
             "TextSize",
             "TextStrokeColor3",
@@ -10889,6 +10893,7 @@
         ],
         "Events": [
             "BeginEdit",
+            "BeginEditWithUri",
             "BroadcastMessage",
             "EndEdit",
             "FailedToOpen",
@@ -10896,6 +10901,7 @@
             "LiveEditingClientConfiguration",
             "OpenedWithSource",
             "SendAtomicOperation",
+            "SendAtomicOperationWithUri",
             "SendAtomicUpdateResponse",
             "SendOperation"
         ],
