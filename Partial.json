@@ -447,6 +447,7 @@
             "LoadCharacterLayeredClothing ",
             "LuaCharacterController",
             "NameDisplayDistance",
+            "PlaceAvatarRules",
             "PlayerModuleStatus",
             "UserEmotesEnabled"
         ],
@@ -1765,6 +1766,21 @@
             
         ]
     },
+    "ExternalIdentityService": {
+        "Name": "ExternalIdentityService",
+        "Superclass": "Instance",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            "CancelActiveOperation",
+            "AcquireProofAsync",
+            "GetCapabilitiesAsync"
+        ]
+    },
     "AnimationNode": {
         "Name": "AnimationNode",
         "Superclass": "Object",
@@ -2867,9 +2883,9 @@
         ],
         "Methods": [
             "AnswerIncomingCall",
-            "CreateCall",
             "EndCall",
-            "GetCallingState"
+            "GetCallingState",
+            "CreateCallAsync"
         ]
     },
     "CustomLog": {
@@ -5442,6 +5458,7 @@
             "InterpolationThrottling",
             "LayeredClothingCacheOptimizations",
             "LuauTypeCheckMode",
+            "MapTVRemoteToGamepadKeycodes",
             "MeshPartHeadsAndAccessories",
             "MeshStreamingAndImprovedLods",
             "ModelStreamingBehavior",
@@ -7525,18 +7542,216 @@
             
         ]
     },
-    "PlayerData": {
-        "Name": "PlayerData",
+    "Player": {
+        "Name": "Player",
         "Superclass": "Instance",
         "Properties": [
-            
+            "AccountAge",
+            "AccountAgeReplicate",
+            "AgeChecked",
+            "AppearanceDidLoad",
+            "AutoJumpEnabled",
+            "CameraFieldOfView",
+            "CameraFrustumRequested",
+            "CameraMaxZoomDistance",
+            "CameraMinZoomDistance",
+            "CameraMode",
+            "CameraViewportSize",
+            "CanLoadCharacterAppearance",
+            "Character",
+            "CharacterAppearance",
+            "CharacterAppearanceId",
+            "ChararacterRegionId",
+            "ChatAvailabilityStatus",
+            "ChatMode",
+            "ChatPrivacyMode",
+            "CloudEditCameraCoordinateFrame",
+            "CloudEditPlayerActive",
+            "CountryRegionCodeReplicate",
+            "DataComplexity",
+            "DataComplexityLimit",
+            "DataReady",
+            "DevCameraOcclusionMode",
+            "DevComputerCameraMode",
+            "DevComputerMovementMode",
+            "DevEnableMouseLock",
+            "DevTouchCameraMode",
+            "DevTouchMovementMode",
+            "DisplayName",
+            "FollowUserId",
+            "FollowUserIdReplicated",
+            "FrustumStreaming",
+            "GameplayPaused",
+            "Guest",
+            "HasRobloxSubscription",
+            "HasVerifiedBadge",
+            "HealthDisplayDistance",
+            "InputLatency",
+            "InternalCharacterAppearanceLoaded",
+            "LocaleId",
+            "MaxSimulationRadius",
+            "MaximumSimulationRadius",
+            "MembershipType",
+            "MembershipTypeReplicate",
+            "NameDisplayDistance",
+            "NeedRegionalFallback",
+            "Neutral",
+            "OsPlatform",
+            "PartyId",
+            "PendingRequestedTool",
+            "PlatformName",
+            "RawJoinData",
+            "ReplicationFocus",
+            "RespawnLocation",
+            "SimulationRadius",
+            "StepIdOffset",
+            "SuperSafeChatReplicate",
+            "Team",
+            "TeamColor",
+            "Teleported",
+            "TeleportedIn",
+            "ThirdPartyTextChatRestrictionStatus",
+            "UnfilteredChat",
+            "User",
+            "UserId",
+            "UserIdModeReplicate",
+            "VRDevice",
+            "VREnabled",
+            "VoiceChatVolume",
+            "userId"
         ],
         "Events": [
-            
+            "BlockListChanged",
+            "CharacterAdded",
+            "CharacterAppearanceLoaded",
+            "CharacterRemoving",
+            "Chatted",
+            "CloudEditSelectionChanged",
+            "FriendStatusChanged",
+            "Idled",
+            "InstancePinned",
+            "InstanceUnpinned",
+            "Kill",
+            "NotifyAgeCheckPassedReplicated",
+            "NotifyStreamingUnpinned",
+            "OnTeleport",
+            "OnTeleportInternal",
+            "OverrideStreamRadii",
+            "PauseTeleports",
+            "PlayerCharacterLoaded",
+            "PlayerChatTranslationSettingsLocaleSetFromLua",
+            "PlayerExperienceSettingsLocaleSetFromLua",
+            "RemoteFriendRequestSignal",
+            "RemoteInsert",
+            "RequestStreamingPin",
+            "RequestStreamingPinByUniqueId",
+            "ScopeCheckInitiated",
+            "ScriptSecurityError",
+            "SendCameraFrustum",
+            "SendMaxClientBandwidthBps",
+            "ServerToClientUnfilteredChatReplicate",
+            "ServerUpdatedHead",
+            "SetShutdownMessage",
+            "SimulationRadiusChanged",
+            "StatsAvailable",
+            "StreamingPinComplete",
+            "UnpinStreaming",
+            "iradDebugServerReceivedIradRequest"
         ],
         "Methods": [
-            "GetPlayer",
-            "GetRecordAsync"
+            "AddReplicationFocus",
+            "AddReplicationFocusPosition",
+            "AddToBlockList",
+            "ClearCachedAvatarAppearance",
+            "ClearCharacterAppearance",
+            "DistanceFromCharacter",
+            "GetBlockListInitialized",
+            "GetCameraState",
+            "GetData",
+            "GetFriendStatus",
+            "GetGameSessionID",
+            "GetGlobalUserId",
+            "GetJoinData",
+            "GetMouse",
+            "GetNetworkPing",
+            "GetSeatRequested",
+            "GetToolRequested",
+            "GetUnder13",
+            "HasAppearanceLoaded",
+            "HasBlockedPlayer",
+            "IsVerified",
+            "Kick",
+            "LoadBoolean",
+            "LoadCharacterAppearance",
+            "LoadData",
+            "LoadInstance",
+            "LoadNumber",
+            "LoadString",
+            "Move",
+            "NotifyAgeCheckPassed",
+            "OverrideStreamingRadii",
+            "PinStreamingForInstance",
+            "PinStreamingForInstanceByUniqueId",
+            "PromptAgeCheck",
+            "RemoveCharacter",
+            "RemoveReplicationFocus",
+            "RemoveReplicationFocusPosition",
+            "RequestFriendship",
+            "RequestSeat",
+            "RequestTool",
+            "RevokeFriendship",
+            "SaveBoolean",
+            "SaveData",
+            "SaveInstance",
+            "SaveNumber",
+            "SaveString",
+            "SetAccountAge",
+            "SetBlockListInitialized",
+            "SetCharacterAppearanceJson",
+            "SetChatTranslationSettingsLocaleId",
+            "SetExperienceSettingsLocaleId",
+            "SetHasRobloxSubscription",
+            "SetMembershipType",
+            "SetModerationAccessKey",
+            "SetSuperSafeChat",
+            "SetUnder13",
+            "UnpinStreamingForInstance",
+            "UpdatePlayerBlocked",
+            "loadBoolean",
+            "loadInstance",
+            "loadNumber",
+            "loadString",
+            "saveBoolean",
+            "saveInstance",
+            "saveNumber",
+            "saveString",
+            "ProveRealPlayer",
+            "SetBotStatus",
+            "GetCanManageAsync",
+            "GetFriendsInUniverseAsync",
+            "GetFriendsOnline",
+            "GetFriendsOnlineAsync",
+            "GetFriendsWhoPlayedAsync",
+            "GetRankInGroup",
+            "GetRankInGroupAsync",
+            "GetRoleInGroup",
+            "GetRoleInGroupAsync",
+            "IsBestFriendsWith",
+            "IsFriendsWith",
+            "IsFriendsWithAsync",
+            "IsInGroup",
+            "IsInGroupAsync",
+            "LoadCharacter",
+            "LoadCharacterAsync",
+            "LoadCharacterBlocking",
+            "LoadCharacterWithAvatarRules",
+            "LoadCharacterWithHumanoidDescription",
+            "LoadCharacterWithHumanoidDescriptionAsync",
+            "PromptSecurityChallengeAsync",
+            "RequestStreamAroundAsync",
+            "WaitForDataReady",
+            "isFriendsWith",
+            "waitForDataReady"
         ]
     },
     "UISizeConstraint": {
@@ -7700,8 +7915,8 @@
             
         ]
     },
-    "AnimatedImageService": {
-        "Name": "AnimatedImageService",
+    "NetworkReplicator": {
+        "Name": "NetworkReplicator",
         "Superclass": "Instance",
         "Properties": [
             
@@ -7710,11 +7925,7 @@
             
         ],
         "Methods": [
-            "GetFrameNames",
-            "GetTrack",
-            "GetTracksChanged",
-            "Prewarm",
-            "UnloadTracks"
+            "GetPlayer"
         ]
     },
     "AudioChannelSplitter": {
@@ -7950,16 +8161,32 @@
             
         ]
     },
-    "Motor6D": {
-        "Name": "Motor6D",
-        "Superclass": "Motor",
+    "AvatarAnimationRules": {
+        "Name": "AvatarAnimationRules",
+        "Superclass": "Instance",
         "Properties": [
-            "ChildName",
-            "EnableSkinning",
-            "ParentName",
-            "ReplicateCurrentAngle6D",
-            "ReplicateCurrentOffset6D",
-            "Transform"
+            "AnimationClipsMode",
+            "AnimationPacksMode",
+            "CustomClimbAnimationEnabled",
+            "CustomClimbAnimationId",
+            "CustomFallAnimationEnabled",
+            "CustomFallAnimationId",
+            "CustomIdleAlt1AnimationEnabled",
+            "CustomIdleAlt1AnimationId",
+            "CustomIdleAlt2AnimationEnabled",
+            "CustomIdleAlt2AnimationId",
+            "CustomIdleAnimationEnabled",
+            "CustomIdleAnimationId",
+            "CustomJumpAnimationEnabled",
+            "CustomJumpAnimationId",
+            "CustomRunAnimationEnabled",
+            "CustomRunAnimationId",
+            "CustomSwimAnimationEnabled",
+            "CustomSwimAnimationId",
+            "CustomSwimIdleAnimationEnabled",
+            "CustomSwimIdleAnimationId",
+            "CustomWalkAnimationEnabled",
+            "CustomWalkAnimationId"
         ],
         "Events": [
             
@@ -8175,6 +8402,7 @@
             "DoesMeshHaveSkinningData",
             "DoesSurfaceAppearanceMatchTexturePackAsync",
             "FetchAssetWithFormat",
+            "GetLayeredClothingPostDeformationSizeAsync",
             "GetMeshDataBinaryString",
             "GetMeshVerts",
             "GetSerializedSizeExcludingCollisionAsync",
@@ -8228,51 +8456,33 @@
             
         ]
     },
-    "GamePassService": {
-        "Name": "GamePassService",
-        "Superclass": "Instance",
+    "ChannelSelectorSoundEffect": {
+        "Name": "ChannelSelectorSoundEffect",
+        "Superclass": "CustomSoundEffect",
         "Properties": [
-            
+            "Channel"
         ],
         "Events": [
             
         ],
         "Methods": [
-            "PlayerHasPass"
+            
         ]
     },
-    "AvatarAnimationRules": {
-        "Name": "AvatarAnimationRules",
-        "Superclass": "Instance",
+    "Motor": {
+        "Name": "Motor",
+        "Superclass": "JointInstance",
         "Properties": [
-            "AnimationClipsMode",
-            "AnimationPacksMode",
-            "CustomClimbAnimationEnabled",
-            "CustomClimbAnimationId",
-            "CustomFallAnimationEnabled",
-            "CustomFallAnimationId",
-            "CustomIdleAlt1AnimationEnabled",
-            "CustomIdleAlt1AnimationId",
-            "CustomIdleAlt2AnimationEnabled",
-            "CustomIdleAlt2AnimationId",
-            "CustomIdleAnimationEnabled",
-            "CustomIdleAnimationId",
-            "CustomJumpAnimationEnabled",
-            "CustomJumpAnimationId",
-            "CustomRunAnimationEnabled",
-            "CustomRunAnimationId",
-            "CustomSwimAnimationEnabled",
-            "CustomSwimAnimationId",
-            "CustomSwimIdleAnimationEnabled",
-            "CustomSwimIdleAnimationId",
-            "CustomWalkAnimationEnabled",
-            "CustomWalkAnimationId"
+            "CurrentAngle",
+            "DesiredAngle",
+            "MaxVelocity",
+            "ReplicateCurrentAngle"
         ],
         "Events": [
             
         ],
         "Methods": [
-            
+            "SetDesiredAngle"
         ]
     },
     "LodDataEntity": {
@@ -8312,26 +8522,20 @@
             
         ]
     },
-    "Fire": {
-        "Name": "Fire",
+    "PathfindingService": {
+        "Name": "PathfindingService",
         "Superclass": "Instance",
         "Properties": [
-            "Color",
-            "Enabled",
-            "Heat",
-            "LocalTransparencyModifier",
-            "SecondaryColor",
-            "Size",
-            "TimeScale",
-            "heat_xml",
-            "size",
-            "size_xml"
+            "EmptyCutoff"
         ],
         "Events": [
             
         ],
         "Methods": [
-            "FastForward"
+            "CreatePath",
+            "ComputeRawPathAsync",
+            "ComputeSmoothPathAsync",
+            "FindPathAsync"
         ]
     },
     "BranchService": {
@@ -8869,34 +9073,22 @@
             
         ]
     },
-    "GenerationService": {
-        "Name": "GenerationService",
+    "Atmosphere": {
+        "Name": "Atmosphere",
         "Superclass": "Instance",
         "Properties": [
-            
+            "Color",
+            "Decay",
+            "Density",
+            "Glare",
+            "Haze",
+            "Offset"
         ],
         "Events": [
-            "ReplicateGeneration",
-            "RequestGenerationReplication"
+            
         ],
         "Methods": [
-            "ConnectAsync",
-            "DisconnectAsync",
-            "ExportInstanceToGlbAsync",
-            "ExportMeshToGlbAsync",
-            "GenerateMeshAsync",
-            "GenerateModelAsync",
-            "GetVideoGenSessionAsync",
-            "GetVideoGenTriggersAsync",
-            "InternalGenerateMeshAsync",
-            "LoadGeneratedMeshAsync",
-            "LoadModelFromGlbAsync",
-            "LoadModelFromUrlAsync",
-            "SegmentMeshAsync",
-            "StartVideoGenSessionAsync",
-            "UpdateVideoGenSessionPromptAsync",
-            "UpdateVideoGenSessionTriggersAsync",
-            "ConvertGlbAndUploadAsync"
+            
         ]
     },
     "TextChatCommand": {
@@ -9114,19 +9306,17 @@
             "ConnectAsync"
         ]
     },
-    "AudioDeviceOutput": {
-        "Name": "AudioDeviceOutput",
-        "Superclass": "Instance",
+    "DockWidgetPluginGui": {
+        "Name": "DockWidgetPluginGui",
+        "Superclass": "PluginGui",
         "Properties": [
-            "Player"
+            "HostWidgetWasRestored"
         ],
         "Events": [
-            "WiringChanged"
+            
         ],
         "Methods": [
-            "GetConnectedWires",
-            "GetInputPins",
-            "GetOutputPins"
+            "RequestRaise"
         ]
     },
     "DataStoreGetOptions": {
@@ -9448,24 +9638,30 @@
             "GetOutputPins"
         ]
     },
-    "DebuggerManager": {
-        "Name": "DebuggerManager",
-        "Superclass": "Instance",
+    "PluginGui": {
+        "Name": "PluginGui",
+        "Superclass": "LayerCollector",
         "Properties": [
-            "DebuggingEnabled"
+            "Plugin",
+            "Title"
         ],
         "Events": [
-            "DebuggerAdded",
-            "DebuggerRemoved"
+            "InputBegan",
+            "InputChanged",
+            "InputEnded",
+            "MouseEnter",
+            "MouseLeave",
+            "PluginDragDropped",
+            "PluginDragEntered",
+            "PluginDragLeft",
+            "PluginDragMoved",
+            "PointerAction",
+            "WindowFocusReleased",
+            "WindowFocused"
         ],
         "Methods": [
-            "AddDebugger",
-            "EnableDebugging",
-            "GetDebuggers",
-            "Resume",
-            "StepIn",
-            "StepOut",
-            "StepOver"
+            "BindToClose",
+            "GetRelativeMousePosition"
         ]
     },
     "SceneAnalysisService": {
@@ -10069,20 +10265,34 @@
             
         ]
     },
-    "AudioDistortion": {
-        "Name": "AudioDistortion",
+    "GenerationService": {
+        "Name": "GenerationService",
         "Superclass": "Instance",
         "Properties": [
-            "Bypass",
-            "Level"
+            
         ],
         "Events": [
-            "WiringChanged"
+            "ReplicateGeneration",
+            "RequestGenerationReplication"
         ],
         "Methods": [
-            "GetConnectedWires",
-            "GetInputPins",
-            "GetOutputPins"
+            "ConnectAsync",
+            "DisconnectAsync",
+            "ExportInstanceToGlbAsync",
+            "ExportMeshToGlbAsync",
+            "GenerateMeshAsync",
+            "GenerateModelAsync",
+            "GetVideoGenSessionAsync",
+            "GetVideoGenTriggersAsync",
+            "InternalGenerateMeshAsync",
+            "LoadGeneratedMeshAsync",
+            "LoadModelFromGlbAsync",
+            "LoadModelFromUrlAsync",
+            "SegmentMeshAsync",
+            "StartVideoGenSessionAsync",
+            "UpdateVideoGenSessionPromptAsync",
+            "UpdateVideoGenSessionTriggersAsync",
+            "ConvertGlbAndUploadAsync"
         ]
     },
     "BaseRemoteEvent": {
@@ -10218,25 +10428,26 @@
             "IsAvailable"
         ]
     },
-    "PartyEmulatorService": {
-        "Name": "PartyEmulatorService",
+    "Fire": {
+        "Name": "Fire",
         "Superclass": "Instance",
         "Properties": [
-            
+            "Color",
+            "Enabled",
+            "Heat",
+            "LocalTransparencyModifier",
+            "SecondaryColor",
+            "Size",
+            "TimeScale",
+            "heat_xml",
+            "size",
+            "size_xml"
         ],
         "Events": [
-            "ConfigurationChanged"
+            
         ],
         "Methods": [
-            "CreateNewParty",
-            "DeleteParty",
-            "GetEmulatedPartyConfiguration",
-            "GetIsEmulationEnabled",
-            "OnTestPlayerCountChanged",
-            "SetIsEmulationEnabled",
-            "SetPlayerPartyId",
-            "applyPartyIdToPlayer",
-            "GetEmulatedPartyAsync"
+            "FastForward"
         ]
     },
     "StandardPages": {
@@ -10265,9 +10476,9 @@
             
         ]
     },
-    "CustomSoundEffect": {
-        "Name": "CustomSoundEffect",
-        "Superclass": "SoundEffect",
+    "LocalScript": {
+        "Name": "LocalScript",
+        "Superclass": "Script",
         "Properties": [
             
         ],
@@ -10293,22 +10504,39 @@
             
         ]
     },
-    "BubbleChatMessageProperties": {
-        "Name": "BubbleChatMessageProperties",
-        "Superclass": "TextChatMessageProperties",
+    "AvatarAccessoryRules": {
+        "Name": "AvatarAccessoryRules",
+        "Superclass": "Instance",
         "Properties": [
-            "BackgroundColor3",
-            "BackgroundTransparency",
-            "FontFace",
-            "TailVisible",
-            "TextColor3",
-            "TextSize"
+            "AccessoryMode",
+            "CustomAccessoryMode",
+            "CustomBackAccessoryEnabled",
+            "CustomBackAccessoryId",
+            "CustomFaceAccessoryEnabled",
+            "CustomFaceAccessoryId",
+            "CustomFrontAccessoryEnabled",
+            "CustomFrontAccessoryId",
+            "CustomHairAccessoryEnabled",
+            "CustomHairAccessoryId",
+            "CustomHeadAccessoryEnabled",
+            "CustomHeadAccessoryId",
+            "CustomNeckAccessoryEnabled",
+            "CustomNeckAccessoryId",
+            "CustomShoulderAccessoryEnabled",
+            "CustomShoulderAccessoryId",
+            "CustomWaistAccessoryEnabled",
+            "CustomWaistAccessoryId",
+            "EnableEmissives",
+            "EnableSound",
+            "EnableVFX",
+            "LimitBounds",
+            "LimitMethod"
         ],
         "Events": [
             
         ],
         "Methods": [
-            
+            "willRemoveAccessory"
         ]
     },
     "CornerWedgePart": {
@@ -10509,11 +10737,11 @@
             
         ]
     },
-    "AvatarRules": {
-        "Name": "AvatarRules",
+    "PlaceStatsService": {
+        "Name": "PlaceStatsService",
         "Superclass": "Instance",
         "Properties": [
-            "AvatarType"
+            
         ],
         "Events": [
             
@@ -10795,24 +11023,27 @@
             
         ]
     },
-    "FloatCurve": {
-        "Name": "FloatCurve",
+    "CommerceService": {
+        "Name": "CommerceService",
         "Superclass": "Instance",
         "Properties": [
-            "Length",
-            "ValuesAndTimes"
-        ],
-        "Events": [
             
         ],
+        "Events": [
+            "BenefitStatusReceived",
+            "FetchReceipt",
+            "InExperienceBrowserRequested",
+            "PromptCommerceProductPurchaseFinished",
+            "PromptCommerceProductPurchaseRequested",
+            "PurchaseBrowserClosed"
+        ],
         "Methods": [
-            "GetKeyAtIndex",
-            "GetKeyIndicesAtTime",
-            "GetKeys",
-            "GetValueAtTime",
-            "InsertKey",
-            "RemoveKeyAtIndex",
-            "SetKeys"
+            "PromptCommerceProductPurchase",
+            "PromptRealWorldCommerceBrowser",
+            "SignalPromptCommerceProductPurchaseFinished",
+            "GetCommerceProductInfoAsync",
+            "PrepareCommerceProductPurchase",
+            "UserEligibleForRealWorldCommerceAsync"
         ]
     },
     "ScriptPinningService": {
@@ -11365,8 +11596,8 @@
             "GetInputActions"
         ]
     },
-    "MemoryStoreHashMap": {
-        "Name": "MemoryStoreHashMap",
+    "MemoryStoreDistributedCounter": {
+        "Name": "MemoryStoreDistributedCounter",
         "Superclass": "Instance",
         "Properties": [
             
@@ -11376,10 +11607,7 @@
         ],
         "Methods": [
             "GetAsync",
-            "ListItemsAsync",
-            "RemoveAsync",
-            "SetAsync",
-            "UpdateAsync"
+            "IncrementAsync"
         ]
     },
     "ScrollingFrame": {
@@ -11501,17 +11729,20 @@
             
         ]
     },
-    "AnimationValueOutputDefinition": {
-        "Name": "AnimationValueOutputDefinition",
+    "AudioDistortion": {
+        "Name": "AudioDistortion",
         "Superclass": "Instance",
         "Properties": [
-            
+            "Bypass",
+            "Level"
         ],
         "Events": [
-            
+            "WiringChanged"
         ],
         "Methods": [
-            
+            "GetConnectedWires",
+            "GetInputPins",
+            "GetOutputPins"
         ]
     },
     "ScriptScannerService": {
@@ -11664,8 +11895,8 @@
             "SetMotor"
         ]
     },
-    "HttpRbxApiService": {
-        "Name": "HttpRbxApiService",
+    "MomentsService": {
+        "Name": "MomentsService",
         "Superclass": "Instance",
         "Properties": [
             
@@ -11674,13 +11905,9 @@
             
         ],
         "Methods": [
-            "GetDocumentationUrl",
-            "GetAsync",
-            "GetAsyncFullUrl",
-            "PostAsync",
-            "PostAsyncFullUrl",
-            "RequestAsync",
-            "RequestLimitedAsync"
+            "CheckMomentTextStatusAsync",
+            "CreatePostAsync",
+            "GenerateMomentTextAsync"
         ]
     },
     "TeleportAsyncResult": {
@@ -11991,8 +12218,8 @@
             "SearchCatalogAsync"
         ]
     },
-    "MemoryStoreService": {
-        "Name": "MemoryStoreService",
+    "MemoryStoreQueue": {
+        "Name": "MemoryStoreQueue",
         "Superclass": "Instance",
         "Properties": [
             
@@ -12001,10 +12228,10 @@
             
         ],
         "Methods": [
-            "GetDistributedCounter",
-            "GetHashMap",
-            "GetQueue",
-            "GetSortedMap"
+            "AddAsync",
+            "GetSizeAsync",
+            "ReadAsync",
+            "RemoveAsync"
         ]
     },
     "AnimationGraphDefinition": {
@@ -12047,8 +12274,8 @@
             
         ]
     },
-    "MemStorageConnection": {
-        "Name": "MemStorageConnection",
+    "PopLatencyService": {
+        "Name": "PopLatencyService",
         "Superclass": "Instance",
         "Properties": [
             
@@ -12057,7 +12284,8 @@
             
         ],
         "Methods": [
-            "Disconnect"
+            "GetSnapshot",
+            "IsEnabled"
         ]
     },
     "RobloxPluginGuiService": {
@@ -12213,91 +12441,48 @@
             "RequestAsync"
         ]
     },
-    "PopLatencyService": {
-        "Name": "PopLatencyService",
+    "PolicyService": {
+        "Name": "PolicyService",
         "Superclass": "Instance",
         "Properties": [
-            
+            "IsLuobuServer",
+            "LuobuWhitelisted"
         ],
         "Events": [
             
         ],
         "Methods": [
-            "GetSnapshot",
-            "IsEnabled"
+            "CanViewBrandProjectAsync",
+            "GetPolicyInfoForPlayerAsync",
+            "GetPolicyInfoForServerRobloxOnlyAsync"
         ]
     },
-    "Plugin": {
-        "Name": "Plugin",
+    "NotificationService": {
+        "Name": "NotificationService",
         "Superclass": "Instance",
         "Properties": [
-            "CollisionEnabled",
-            "DisableUIDragDetectorDrags",
-            "GridSize",
-            "HostDataModelType",
-            "HostDataModelTypeIsCurrent",
-            "IsDebuggable",
-            "MultipleDocumentInterfaceInstance",
-            "UsesAssetInsertionDrag"
+            "IsConnected",
+            "IsLuaChatEnabled",
+            "IsLuaGameDetailsEnabled",
+            "SelectedTheme"
         ],
         "Events": [
-            "Deactivation",
-            "Ready",
-            "Unloading",
-            "ViewportDragDropped",
-            "ViewportDragEntered",
-            "ViewportDragLeft"
+            "RccConnectionChanged",
+            "RccEventReceived",
+            "Roblox17sConnectionChanged",
+            "Roblox17sEventReceived",
+            "RobloxConnectionChanged",
+            "RobloxEventReceived"
         ],
         "Methods": [
-            "Activate",
-            "CreatePluginAction",
-            "CreatePluginMenu",
-            "CreateToolbar",
-            "Deactivate",
-            "FinishFullLoading",
-            "GetItem",
-            "GetJoinMode",
-            "GetMouse",
-            "GetPluginComponent",
-            "GetSelectedRibbonTool",
-            "GetSetting",
-            "GetStudioUserId",
-            "GetUri",
-            "Intersect",
-            "Invoke",
-            "IsActivated",
-            "IsActivatedWithExclusiveMouse",
-            "IsLoadedFromProject",
-            "Negate",
-            "OnInvoke",
-            "OnInvokeSuspendOverride",
-            "OnSetItem",
-            "OpenScript",
-            "OpenWikiPage",
-            "PauseSound",
-            "PlaySound",
-            "ResumeSound",
-            "SaveSelectedToRoblox",
-            "SelectRibbonTool",
-            "Separate",
-            "SetItem",
-            "SetReady",
-            "SetSetting",
-            "StartDecalDrag",
-            "StartDrag",
-            "StopAllSounds",
-            "Union",
-            "CreateDockWidgetPluginGui",
-            "CreateDockWidgetPluginGuiAsync",
-            "CreateQWidgetPluginGui",
-            "ImportFbxAnimation",
-            "ImportFbxAnimationAsync",
-            "ImportFbxRig",
-            "ImportFbxRigAsync",
-            "PromptForExistingAssetId",
-            "PromptForExistingAssetIdAsync",
-            "PromptSaveSelection",
-            "PromptSaveSelectionAsync"
+            "ActionEnabled",
+            "ActionTaken",
+            "CancelAllNotification",
+            "CancelNotification",
+            "ScheduleNotification",
+            "SubscribeToRccEventNamespace",
+            "SwitchedToAppShellFeature",
+            "GetScheduledNotifications"
         ]
     },
     "AnimationNodeDefinition": {
@@ -12490,34 +12675,6 @@
             
         ]
     },
-    "InternalMessagingServiceVerifier": {
-        "Name": "InternalMessagingServiceVerifier",
-        "Superclass": "Instance",
-        "Properties": [
-            
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            
-        ]
-    },
-    "Part": {
-        "Name": "Part",
-        "Superclass": "FormFactorPart",
-        "Properties": [
-            "Shape",
-            "shap",
-            "shape"
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            
-        ]
-    },
     "GenericChallengeService": {
         "Name": "GenericChallengeService",
         "Superclass": "Instance",
@@ -12537,6 +12694,34 @@
             "SignalChallengeInvalidated",
             "SignalChallengeLoaded",
             "SignalChallengeRequired"
+        ]
+    },
+    "Part": {
+        "Name": "Part",
+        "Superclass": "FormFactorPart",
+        "Properties": [
+            "Shape",
+            "shap",
+            "shape"
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
+        ]
+    },
+    "MemStorageConnection": {
+        "Name": "MemStorageConnection",
+        "Superclass": "Instance",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            "Disconnect"
         ]
     },
     "RobloxSerializableInstance": {
@@ -12618,232 +12803,17 @@
             
         ]
     },
-    "PolicyService": {
-        "Name": "PolicyService",
+    "AvatarRules": {
+        "Name": "AvatarRules",
         "Superclass": "Instance",
         "Properties": [
-            "IsLuobuServer",
-            "LuobuWhitelisted"
+            "AvatarType"
         ],
         "Events": [
             
         ],
         "Methods": [
-            "CanViewBrandProjectAsync",
-            "GetPolicyInfoForPlayerAsync",
-            "GetPolicyInfoForServerRobloxOnlyAsync"
-        ]
-    },
-    "Player": {
-        "Name": "Player",
-        "Superclass": "Instance",
-        "Properties": [
-            "AccountAge",
-            "AccountAgeReplicate",
-            "AgeChecked",
-            "AppearanceDidLoad",
-            "AutoJumpEnabled",
-            "CameraFieldOfView",
-            "CameraFrustumRequested",
-            "CameraMaxZoomDistance",
-            "CameraMinZoomDistance",
-            "CameraMode",
-            "CameraViewportSize",
-            "CanLoadCharacterAppearance",
-            "Character",
-            "CharacterAppearance",
-            "CharacterAppearanceId",
-            "ChararacterRegionId",
-            "ChatAvailabilityStatus",
-            "ChatMode",
-            "ChatPrivacyMode",
-            "CloudEditCameraCoordinateFrame",
-            "CloudEditPlayerActive",
-            "CountryRegionCodeReplicate",
-            "DataComplexity",
-            "DataComplexityLimit",
-            "DataReady",
-            "DevCameraOcclusionMode",
-            "DevComputerCameraMode",
-            "DevComputerMovementMode",
-            "DevEnableMouseLock",
-            "DevTouchCameraMode",
-            "DevTouchMovementMode",
-            "DisplayName",
-            "FollowUserId",
-            "FollowUserIdReplicated",
-            "FrustumStreaming",
-            "GameplayPaused",
-            "Guest",
-            "HasRobloxSubscription",
-            "HasVerifiedBadge",
-            "HealthDisplayDistance",
-            "InputLatency",
-            "InternalCharacterAppearanceLoaded",
-            "LocaleId",
-            "MaxSimulationRadius",
-            "MaximumSimulationRadius",
-            "MembershipType",
-            "MembershipTypeReplicate",
-            "NameDisplayDistance",
-            "NeedRegionalFallback",
-            "Neutral",
-            "OsPlatform",
-            "PartyId",
-            "PendingRequestedTool",
-            "PlatformName",
-            "RawJoinData",
-            "ReplicationFocus",
-            "RespawnLocation",
-            "SimulationRadius",
-            "StepIdOffset",
-            "SuperSafeChatReplicate",
-            "Team",
-            "TeamColor",
-            "Teleported",
-            "TeleportedIn",
-            "ThirdPartyTextChatRestrictionStatus",
-            "UnfilteredChat",
-            "User",
-            "UserId",
-            "UserIdModeReplicate",
-            "VRDevice",
-            "VREnabled",
-            "VoiceChatVolume",
-            "userId"
-        ],
-        "Events": [
-            "BlockListChanged",
-            "CharacterAdded",
-            "CharacterAppearanceLoaded",
-            "CharacterRemoving",
-            "Chatted",
-            "CloudEditSelectionChanged",
-            "FriendStatusChanged",
-            "Idled",
-            "InstancePinned",
-            "InstanceUnpinned",
-            "Kill",
-            "NotifyAgeCheckPassedReplicated",
-            "NotifyStreamingUnpinned",
-            "OnTeleport",
-            "OnTeleportInternal",
-            "OverrideStreamRadii",
-            "PauseTeleports",
-            "PlayerCharacterLoaded",
-            "PlayerChatTranslationSettingsLocaleSetFromLua",
-            "PlayerExperienceSettingsLocaleSetFromLua",
-            "RemoteFriendRequestSignal",
-            "RemoteInsert",
-            "RequestStreamingPin",
-            "RequestStreamingPinByUniqueId",
-            "ScopeCheckInitiated",
-            "ScriptSecurityError",
-            "SendCameraFrustum",
-            "SendMaxClientBandwidthBps",
-            "ServerToClientUnfilteredChatReplicate",
-            "ServerUpdatedHead",
-            "SetShutdownMessage",
-            "SimulationRadiusChanged",
-            "StatsAvailable",
-            "StreamingPinComplete",
-            "UnpinStreaming",
-            "iradDebugServerReceivedIradRequest"
-        ],
-        "Methods": [
-            "AddReplicationFocus",
-            "AddReplicationFocusPosition",
-            "AddToBlockList",
-            "ClearCachedAvatarAppearance",
-            "ClearCharacterAppearance",
-            "DistanceFromCharacter",
-            "GetBlockListInitialized",
-            "GetCameraState",
-            "GetData",
-            "GetFriendStatus",
-            "GetGameSessionID",
-            "GetGlobalUserId",
-            "GetJoinData",
-            "GetMouse",
-            "GetNetworkPing",
-            "GetSeatRequested",
-            "GetToolRequested",
-            "GetUnder13",
-            "HasAppearanceLoaded",
-            "HasBlockedPlayer",
-            "IsVerified",
-            "Kick",
-            "LoadBoolean",
-            "LoadCharacterAppearance",
-            "LoadData",
-            "LoadInstance",
-            "LoadNumber",
-            "LoadString",
-            "Move",
-            "NotifyAgeCheckPassed",
-            "OverrideStreamingRadii",
-            "PinStreamingForInstance",
-            "PinStreamingForInstanceByUniqueId",
-            "PromptAgeCheck",
-            "RemoveCharacter",
-            "RemoveReplicationFocus",
-            "RemoveReplicationFocusPosition",
-            "RequestFriendship",
-            "RequestSeat",
-            "RequestTool",
-            "RevokeFriendship",
-            "SaveBoolean",
-            "SaveData",
-            "SaveInstance",
-            "SaveNumber",
-            "SaveString",
-            "SetAccountAge",
-            "SetBlockListInitialized",
-            "SetCharacterAppearanceJson",
-            "SetChatTranslationSettingsLocaleId",
-            "SetExperienceSettingsLocaleId",
-            "SetHasRobloxSubscription",
-            "SetMembershipType",
-            "SetModerationAccessKey",
-            "SetSuperSafeChat",
-            "SetUnder13",
-            "UnpinStreamingForInstance",
-            "UpdatePlayerBlocked",
-            "loadBoolean",
-            "loadInstance",
-            "loadNumber",
-            "loadString",
-            "saveBoolean",
-            "saveInstance",
-            "saveNumber",
-            "saveString",
-            "ProveRealPlayer",
-            "SetBotStatus",
-            "GetCanManageAsync",
-            "GetFriendsInUniverseAsync",
-            "GetFriendsOnline",
-            "GetFriendsOnlineAsync",
-            "GetFriendsWhoPlayedAsync",
-            "GetRankInGroup",
-            "GetRankInGroupAsync",
-            "GetRoleInGroup",
-            "GetRoleInGroupAsync",
-            "IsBestFriendsWith",
-            "IsFriendsWith",
-            "IsFriendsWithAsync",
-            "IsInGroup",
-            "IsInGroupAsync",
-            "LoadCharacter",
-            "LoadCharacterAsync",
-            "LoadCharacterBlocking",
-            "LoadCharacterWithAvatarRules",
-            "LoadCharacterWithHumanoidDescription",
-            "LoadCharacterWithHumanoidDescriptionAsync",
-            "PromptSecurityChallengeAsync",
-            "RequestStreamAroundAsync",
-            "WaitForDataReady",
-            "isFriendsWith",
-            "waitForDataReady"
+            
         ]
     },
     "HeatmapService": {
@@ -12857,6 +12827,26 @@
         ],
         "Methods": [
             
+        ]
+    },
+    "DebuggerManager": {
+        "Name": "DebuggerManager",
+        "Superclass": "Instance",
+        "Properties": [
+            "DebuggingEnabled"
+        ],
+        "Events": [
+            "DebuggerAdded",
+            "DebuggerRemoved"
+        ],
+        "Methods": [
+            "AddDebugger",
+            "EnableDebugging",
+            "GetDebuggers",
+            "Resume",
+            "StepIn",
+            "StepOut",
+            "StepOver"
         ]
     },
     "Annotation": {
@@ -12973,32 +12963,6 @@
             "SetAbsoluteSize"
         ]
     },
-    "PluginGui": {
-        "Name": "PluginGui",
-        "Superclass": "LayerCollector",
-        "Properties": [
-            "Plugin",
-            "Title"
-        ],
-        "Events": [
-            "InputBegan",
-            "InputChanged",
-            "InputEnded",
-            "MouseEnter",
-            "MouseLeave",
-            "PluginDragDropped",
-            "PluginDragEntered",
-            "PluginDragLeft",
-            "PluginDragMoved",
-            "PointerAction",
-            "WindowFocusReleased",
-            "WindowFocused"
-        ],
-        "Methods": [
-            "BindToClose",
-            "GetRelativeMousePosition"
-        ]
-    },
     "PluginDragEvent": {
         "Name": "PluginDragEvent",
         "Superclass": "Instance",
@@ -13028,21 +12992,6 @@
             
         ]
     },
-    "DataStoreObjectVersionInfo": {
-        "Name": "DataStoreObjectVersionInfo",
-        "Superclass": "Instance",
-        "Properties": [
-            "CreatedTime",
-            "IsDeleted",
-            "Version"
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            
-        ]
-    },
     "PluginAction": {
         "Name": "PluginAction",
         "Superclass": "Instance",
@@ -13061,6 +13010,94 @@
         ],
         "Methods": [
             
+        ]
+    },
+    "DataStoreObjectVersionInfo": {
+        "Name": "DataStoreObjectVersionInfo",
+        "Superclass": "Instance",
+        "Properties": [
+            "CreatedTime",
+            "IsDeleted",
+            "Version"
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
+        ]
+    },
+    "Plugin": {
+        "Name": "Plugin",
+        "Superclass": "Instance",
+        "Properties": [
+            "CollisionEnabled",
+            "DisableUIDragDetectorDrags",
+            "GridSize",
+            "HostDataModelType",
+            "HostDataModelTypeIsCurrent",
+            "IsDebuggable",
+            "MultipleDocumentInterfaceInstance",
+            "UsesAssetInsertionDrag"
+        ],
+        "Events": [
+            "Deactivation",
+            "Ready",
+            "Unloading",
+            "ViewportDragDropped",
+            "ViewportDragEntered",
+            "ViewportDragLeft"
+        ],
+        "Methods": [
+            "Activate",
+            "CreatePluginAction",
+            "CreatePluginMenu",
+            "CreateToolbar",
+            "Deactivate",
+            "FinishFullLoading",
+            "GetItem",
+            "GetJoinMode",
+            "GetMouse",
+            "GetPluginComponent",
+            "GetSelectedRibbonTool",
+            "GetSetting",
+            "GetStudioUserId",
+            "GetUri",
+            "Intersect",
+            "Invoke",
+            "IsActivated",
+            "IsActivatedWithExclusiveMouse",
+            "IsLoadedFromProject",
+            "Negate",
+            "OnInvoke",
+            "OnInvokeSuspendOverride",
+            "OnSetItem",
+            "OpenScript",
+            "OpenWikiPage",
+            "PauseSound",
+            "PlaySound",
+            "ResumeSound",
+            "SaveSelectedToRoblox",
+            "SelectRibbonTool",
+            "Separate",
+            "SetItem",
+            "SetReady",
+            "SetSetting",
+            "StartDecalDrag",
+            "StartDrag",
+            "StopAllSounds",
+            "Union",
+            "CreateDockWidgetPluginGui",
+            "CreateDockWidgetPluginGuiAsync",
+            "CreateQWidgetPluginGui",
+            "ImportFbxAnimation",
+            "ImportFbxAnimationAsync",
+            "ImportFbxRig",
+            "ImportFbxRigAsync",
+            "PromptForExistingAssetId",
+            "PromptForExistingAssetIdAsync",
+            "PromptSaveSelection",
+            "PromptSaveSelectionAsync"
         ]
     },
     "RayValue": {
@@ -13171,32 +13208,17 @@
             "RegisterTouchMovementMode"
         ]
     },
-    "NotificationService": {
-        "Name": "NotificationService",
+    "AnimationValueOutputDefinition": {
+        "Name": "AnimationValueOutputDefinition",
         "Superclass": "Instance",
         "Properties": [
-            "IsConnected",
-            "IsLuaChatEnabled",
-            "IsLuaGameDetailsEnabled",
-            "SelectedTheme"
+            
         ],
         "Events": [
-            "RccConnectionChanged",
-            "RccEventReceived",
-            "Roblox17sConnectionChanged",
-            "Roblox17sEventReceived",
-            "RobloxConnectionChanged",
-            "RobloxEventReceived"
+            
         ],
         "Methods": [
-            "ActionEnabled",
-            "ActionTaken",
-            "CancelAllNotification",
-            "CancelNotification",
-            "ScheduleNotification",
-            "SubscribeToRccEventNamespace",
-            "SwitchedToAppShellFeature",
-            "GetScheduledNotifications"
+            
         ]
     },
     "BodyForce": {
@@ -13344,20 +13366,6 @@
             "ToggleTeamCreate"
         ]
     },
-    "OpenCloudApiV1": {
-        "Name": "OpenCloudApiV1",
-        "Superclass": "Instance",
-        "Properties": [
-            
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            "CreateModel",
-            "CreateUserNotificationAsync"
-        ]
-    },
     "PlayerEmulatorService": {
         "Name": "PlayerEmulatorService",
         "Superclass": "Instance",
@@ -13379,6 +13387,19 @@
             "SetEmulatedPolicyInfo"
         ]
     },
+    "PlayerDataService": {
+        "Name": "PlayerDataService",
+        "Superclass": "Instance",
+        "Properties": [
+            "LoadFailureBehavior"
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            "GetRecordConfig"
+        ]
+    },
     "EventIngestService": {
         "Name": "EventIngestService",
         "Superclass": "Instance",
@@ -13395,17 +13416,17 @@
             "SetRBXEventStream"
         ]
     },
-    "PlayerDataService": {
-        "Name": "PlayerDataService",
-        "Superclass": "Instance",
+    "BinaryStringValue": {
+        "Name": "BinaryStringValue",
+        "Superclass": "ValueBase",
         "Properties": [
-            "LoadFailureBehavior"
+            "Value"
         ],
         "Events": [
             
         ],
         "Methods": [
-            "GetRecordConfig"
+            
         ]
     },
     "DataStoreService": {
@@ -13427,17 +13448,18 @@
             "ListDataStoresAsync"
         ]
     },
-    "BinaryStringValue": {
-        "Name": "BinaryStringValue",
-        "Superclass": "ValueBase",
+    "PlayerData": {
+        "Name": "PlayerData",
+        "Superclass": "Instance",
         "Properties": [
-            "Value"
+            
         ],
         "Events": [
             
         ],
         "Methods": [
-            
+            "GetPlayer",
+            "GetRecordAsync"
         ]
     },
     "ClientReplicator": {
@@ -13596,19 +13618,6 @@
             "stop"
         ]
     },
-    "PlaceStatsService": {
-        "Name": "PlaceStatsService",
-        "Superclass": "Instance",
-        "Properties": [
-            
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            
-        ]
-    },
     "PinShortcutService": {
         "Name": "PinShortcutService",
         "Superclass": "Instance",
@@ -13655,6 +13664,20 @@
             "UnregisterCollisionGroup"
         ]
     },
+    "PartOperationAsset": {
+        "Name": "PartOperationAsset",
+        "Superclass": "Instance",
+        "Properties": [
+            "ChildData",
+            "MeshData"
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
+        ]
+    },
     "ChorusSoundEffect": {
         "Name": "ChorusSoundEffect",
         "Superclass": "SoundEffect",
@@ -13689,28 +13712,35 @@
             "isVideoEnabled"
         ]
     },
-    "PathfindingService": {
-        "Name": "PathfindingService",
-        "Superclass": "Instance",
-        "Properties": [
-            "EmptyCutoff"
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            "CreatePath",
-            "ComputeRawPathAsync",
-            "ComputeSmoothPathAsync",
-            "FindPathAsync"
-        ]
-    },
     "PathfindingModifier": {
         "Name": "PathfindingModifier",
         "Superclass": "Instance",
         "Properties": [
             "Label",
             "PassThrough"
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
+        ]
+    },
+    "MaterialImportData": {
+        "Name": "MaterialImportData",
+        "Superclass": "BaseImportData",
+        "Properties": [
+            "DiffuseFilePath",
+            "DiffuseVersionedAssetId",
+            "EmissiveFilePath",
+            "EmissiveVersionedAssetId",
+            "IsPbr",
+            "MetalnessFilePath",
+            "MetalnessVersionedAssetId",
+            "NormalFilePath",
+            "NormalVersionedAssetId",
+            "RoughnessFilePath",
+            "RoughnessVersionedAssetId"
         ],
         "Events": [
             
@@ -13752,27 +13782,23 @@
             "lastForce"
         ]
     },
-    "MaterialImportData": {
-        "Name": "MaterialImportData",
-        "Superclass": "BaseImportData",
+    "HttpRbxApiService": {
+        "Name": "HttpRbxApiService",
+        "Superclass": "Instance",
         "Properties": [
-            "DiffuseFilePath",
-            "DiffuseVersionedAssetId",
-            "EmissiveFilePath",
-            "EmissiveVersionedAssetId",
-            "IsPbr",
-            "MetalnessFilePath",
-            "MetalnessVersionedAssetId",
-            "NormalFilePath",
-            "NormalVersionedAssetId",
-            "RoughnessFilePath",
-            "RoughnessVersionedAssetId"
+            
         ],
         "Events": [
             
         ],
         "Methods": [
-            
+            "GetDocumentationUrl",
+            "GetAsync",
+            "GetAsyncFullUrl",
+            "PostAsync",
+            "PostAsyncFullUrl",
+            "RequestAsync",
+            "RequestLimitedAsync"
         ]
     },
     "DepthOfFieldEffect": {
@@ -13823,19 +13849,25 @@
             
         ]
     },
-    "MomentsService": {
-        "Name": "MomentsService",
+    "PartyEmulatorService": {
+        "Name": "PartyEmulatorService",
         "Superclass": "Instance",
         "Properties": [
             
         ],
         "Events": [
-            
+            "ConfigurationChanged"
         ],
         "Methods": [
-            "CheckMomentTextStatusAsync",
-            "CreatePostAsync",
-            "GenerateMomentTextAsync"
+            "CreateNewParty",
+            "DeleteParty",
+            "GetEmulatedPartyConfiguration",
+            "GetIsEmulationEnabled",
+            "OnTestPlayerCountChanged",
+            "SetIsEmulationEnabled",
+            "SetPlayerPartyId",
+            "applyPartyIdToPlayer",
+            "GetEmulatedPartyAsync"
         ]
     },
     "MLModelDeliveryService": {
@@ -13902,33 +13934,6 @@
             "GetOutputPins"
         ]
     },
-    "PartOperationAsset": {
-        "Name": "PartOperationAsset",
-        "Superclass": "Instance",
-        "Properties": [
-            "ChildData",
-            "MeshData"
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            
-        ]
-    },
-    "ForceField": {
-        "Name": "ForceField",
-        "Superclass": "Instance",
-        "Properties": [
-            "Visible"
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            
-        ]
-    },
     "PartOperation": {
         "Name": "PartOperation",
         "Superclass": "TriangleMeshPart",
@@ -13957,6 +13962,32 @@
         ],
         "Methods": [
             "SubstituteGeometry"
+        ]
+    },
+    "ForceField": {
+        "Name": "ForceField",
+        "Superclass": "Instance",
+        "Properties": [
+            "Visible"
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
+        ]
+    },
+    "IntentService": {
+        "Name": "IntentService",
+        "Superclass": "Instance",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
         ]
     },
     "NumberPose": {
@@ -14001,8 +14032,8 @@
             
         ]
     },
-    "IntentService": {
-        "Name": "IntentService",
+    "CookiesService": {
+        "Name": "CookiesService",
         "Superclass": "Instance",
         "Properties": [
             
@@ -14014,16 +14045,11 @@
             
         ]
     },
-    "Atmosphere": {
-        "Name": "Atmosphere",
+    "AdvancedDragger": {
+        "Name": "AdvancedDragger",
         "Superclass": "Instance",
         "Properties": [
-            "Color",
-            "Decay",
-            "Density",
-            "Glare",
-            "Haze",
-            "Offset"
+            
         ],
         "Events": [
             
@@ -14089,11 +14115,16 @@
             
         ]
     },
-    "AdvancedDragger": {
-        "Name": "AdvancedDragger",
-        "Superclass": "Instance",
+    "BodyGyro": {
+        "Name": "BodyGyro",
+        "Superclass": "BodyMover",
         "Properties": [
-            
+            "CFrame",
+            "D",
+            "MaxTorque",
+            "P",
+            "cframe",
+            "maxTorque"
         ],
         "Events": [
             
@@ -14110,24 +14141,6 @@
         ],
         "Events": [
             "changed"
-        ],
-        "Methods": [
-            
-        ]
-    },
-    "BodyGyro": {
-        "Name": "BodyGyro",
-        "Superclass": "BodyMover",
-        "Properties": [
-            "CFrame",
-            "D",
-            "MaxTorque",
-            "P",
-            "cframe",
-            "maxTorque"
-        ],
-        "Events": [
-            
         ],
         "Methods": [
             
@@ -14153,6 +14166,19 @@
             
         ]
     },
+    "AudioPages": {
+        "Name": "AudioPages",
+        "Superclass": "Pages",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
+        ]
+    },
     "Platform": {
         "Name": "Platform",
         "Superclass": "Part",
@@ -14167,17 +14193,19 @@
             
         ]
     },
-    "AudioPages": {
-        "Name": "AudioPages",
-        "Superclass": "Pages",
+    "PVInstance": {
+        "Name": "PVInstance",
+        "Superclass": "Instance",
         "Properties": [
-            
+            "Origin",
+            "Pivot Offset"
         ],
         "Events": [
             
         ],
         "Methods": [
-            
+            "GetPivot",
+            "PivotTo"
         ]
     },
     "ExperienceNotificationService": {
@@ -14194,21 +14222,6 @@
             "InvokeOptInPromptClosed",
             "PromptOptIn",
             "CanPromptOptInAsync"
-        ]
-    },
-    "PVInstance": {
-        "Name": "PVInstance",
-        "Superclass": "Instance",
-        "Properties": [
-            "Origin",
-            "Pivot Offset"
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            "GetPivot",
-            "PivotTo"
         ]
     },
     "Collaborator": {
@@ -14230,105 +14243,6 @@
         ],
         "Methods": [
             
-        ]
-    },
-    "Animator": {
-        "Name": "Animator",
-        "Superclass": "Instance",
-        "Properties": [
-            "AnimTrackMetadata0",
-            "AnimTrackMetadata1",
-            "AnimTrackMetadata10",
-            "AnimTrackMetadata11",
-            "AnimTrackMetadata12",
-            "AnimTrackMetadata13",
-            "AnimTrackMetadata14",
-            "AnimTrackMetadata15",
-            "AnimTrackMetadata2",
-            "AnimTrackMetadata3",
-            "AnimTrackMetadata4",
-            "AnimTrackMetadata5",
-            "AnimTrackMetadata6",
-            "AnimTrackMetadata7",
-            "AnimTrackMetadata8",
-            "AnimTrackMetadata9",
-            "AnimTrackPlayState0",
-            "AnimTrackPlayState1",
-            "AnimTrackPlayState10",
-            "AnimTrackPlayState11",
-            "AnimTrackPlayState12",
-            "AnimTrackPlayState13",
-            "AnimTrackPlayState14",
-            "AnimTrackPlayState15",
-            "AnimTrackPlayState2",
-            "AnimTrackPlayState3",
-            "AnimTrackPlayState4",
-            "AnimTrackPlayState5",
-            "AnimTrackPlayState6",
-            "AnimTrackPlayState7",
-            "AnimTrackPlayState8",
-            "AnimTrackPlayState9",
-            "AnimTrackWeight0",
-            "AnimTrackWeight1",
-            "AnimTrackWeight10",
-            "AnimTrackWeight11",
-            "AnimTrackWeight12",
-            "AnimTrackWeight13",
-            "AnimTrackWeight14",
-            "AnimTrackWeight15",
-            "AnimTrackWeight2",
-            "AnimTrackWeight3",
-            "AnimTrackWeight4",
-            "AnimTrackWeight5",
-            "AnimTrackWeight6",
-            "AnimTrackWeight7",
-            "AnimTrackWeight8",
-            "AnimTrackWeight9",
-            "AnimationId0",
-            "AnimationId1",
-            "AnimationId10",
-            "AnimationId11",
-            "AnimationId12",
-            "AnimationId13",
-            "AnimationId14",
-            "AnimationId15",
-            "AnimationId2",
-            "AnimationId3",
-            "AnimationId4",
-            "AnimationId5",
-            "AnimationId6",
-            "AnimationId7",
-            "AnimationId8",
-            "AnimationId9",
-            "EvaluationThrottled",
-            "FacsReplicationData",
-            "PreferLodEnabled",
-            "RootMotion",
-            "RootMotionWeight"
-        ],
-        "Events": [
-            "AnimationPlayed",
-            "AnimationPlayedCoreScript",
-            "AnimationStreamTrackPlayed",
-            "OnCombinedUpdate",
-            "OnGraphParameterUpdate",
-            "OnStreamingUpdated2",
-            "StreamSyncRequest"
-        ],
-        "Methods": [
-            "ApplyJointVelocities",
-            "GetPlayingAnimationTracks",
-            "GetPlayingAnimationTracksCoreScript",
-            "GetTrackByAnimationId",
-            "LoadAnimation",
-            "LoadAnimationCoreScript",
-            "LoadStreamAnimation",
-            "LoadStreamAnimationForSelfieView_deprecated",
-            "LoadStreamAnimationV2",
-            "RegisterEvaluationParallelCallback",
-            "StepAnimations",
-            "StepAnimationsInternal",
-            "SynchronizeWith"
         ]
     },
     "MarketplaceService": {
@@ -14460,6 +14374,105 @@
             "UserOwnsGamePassAsync"
         ]
     },
+    "Animator": {
+        "Name": "Animator",
+        "Superclass": "Instance",
+        "Properties": [
+            "AnimTrackMetadata0",
+            "AnimTrackMetadata1",
+            "AnimTrackMetadata10",
+            "AnimTrackMetadata11",
+            "AnimTrackMetadata12",
+            "AnimTrackMetadata13",
+            "AnimTrackMetadata14",
+            "AnimTrackMetadata15",
+            "AnimTrackMetadata2",
+            "AnimTrackMetadata3",
+            "AnimTrackMetadata4",
+            "AnimTrackMetadata5",
+            "AnimTrackMetadata6",
+            "AnimTrackMetadata7",
+            "AnimTrackMetadata8",
+            "AnimTrackMetadata9",
+            "AnimTrackPlayState0",
+            "AnimTrackPlayState1",
+            "AnimTrackPlayState10",
+            "AnimTrackPlayState11",
+            "AnimTrackPlayState12",
+            "AnimTrackPlayState13",
+            "AnimTrackPlayState14",
+            "AnimTrackPlayState15",
+            "AnimTrackPlayState2",
+            "AnimTrackPlayState3",
+            "AnimTrackPlayState4",
+            "AnimTrackPlayState5",
+            "AnimTrackPlayState6",
+            "AnimTrackPlayState7",
+            "AnimTrackPlayState8",
+            "AnimTrackPlayState9",
+            "AnimTrackWeight0",
+            "AnimTrackWeight1",
+            "AnimTrackWeight10",
+            "AnimTrackWeight11",
+            "AnimTrackWeight12",
+            "AnimTrackWeight13",
+            "AnimTrackWeight14",
+            "AnimTrackWeight15",
+            "AnimTrackWeight2",
+            "AnimTrackWeight3",
+            "AnimTrackWeight4",
+            "AnimTrackWeight5",
+            "AnimTrackWeight6",
+            "AnimTrackWeight7",
+            "AnimTrackWeight8",
+            "AnimTrackWeight9",
+            "AnimationId0",
+            "AnimationId1",
+            "AnimationId10",
+            "AnimationId11",
+            "AnimationId12",
+            "AnimationId13",
+            "AnimationId14",
+            "AnimationId15",
+            "AnimationId2",
+            "AnimationId3",
+            "AnimationId4",
+            "AnimationId5",
+            "AnimationId6",
+            "AnimationId7",
+            "AnimationId8",
+            "AnimationId9",
+            "EvaluationThrottled",
+            "FacsReplicationData",
+            "PreferLodEnabled",
+            "RootMotion",
+            "RootMotionWeight"
+        ],
+        "Events": [
+            "AnimationPlayed",
+            "AnimationPlayedCoreScript",
+            "AnimationStreamTrackPlayed",
+            "OnCombinedUpdate",
+            "OnGraphParameterUpdate",
+            "OnStreamingUpdated2",
+            "StreamSyncRequest"
+        ],
+        "Methods": [
+            "ApplyJointVelocities",
+            "GetPlayingAnimationTracks",
+            "GetPlayingAnimationTracksCoreScript",
+            "GetTrackByAnimationId",
+            "LoadAnimation",
+            "LoadAnimationCoreScript",
+            "LoadStreamAnimation",
+            "LoadStreamAnimationForSelfieView_deprecated",
+            "LoadStreamAnimationV2",
+            "RegisterEvaluationParallelCallback",
+            "StepAnimations",
+            "StepAnimationsInternal",
+            "SynchronizeWith"
+        ]
+    },
     "OpenCloudService": {
         "Name": "OpenCloudService",
         "Superclass": "Instance",
@@ -14475,6 +14488,20 @@
             "RegistrationComplete",
             "HttpRequestAsync",
             "InvokeAsync"
+        ]
+    },
+    "OpenCloudApiV1": {
+        "Name": "OpenCloudApiV1",
+        "Superclass": "Instance",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            "CreateModel",
+            "CreateUserNotificationAsync"
         ]
     },
     "PlayerGui": {
@@ -14494,17 +14521,19 @@
             "SetTopbarTransparency"
         ]
     },
-    "NetworkReplicator": {
-        "Name": "NetworkReplicator",
-        "Superclass": "Instance",
+    "Object": {
+        "Name": "Object",
         "Properties": [
-            
+            "ClassName",
+            "className"
         ],
         "Events": [
-            
+            "Changed"
         ],
         "Methods": [
-            "GetPlayer"
+            "GetPropertyChangedSignal",
+            "IsA",
+            "isA"
         ]
     },
     "ConfigSnapshot": {
@@ -14616,21 +14645,6 @@
             
         ]
     },
-    "Object": {
-        "Name": "Object",
-        "Properties": [
-            "ClassName",
-            "className"
-        ],
-        "Events": [
-            "Changed"
-        ],
-        "Methods": [
-            "GetPropertyChangedSignal",
-            "IsA",
-            "isA"
-        ]
-    },
     "NumberValue": {
         "Name": "NumberValue",
         "Superclass": "ValueBase",
@@ -14639,6 +14653,19 @@
         ],
         "Events": [
             "changed"
+        ],
+        "Methods": [
+            
+        ]
+    },
+    "FacsImportData": {
+        "Name": "FacsImportData",
+        "Superclass": "BaseImportData",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
         ],
         "Methods": [
             
@@ -14660,19 +14687,6 @@
             "GetConnectedWires",
             "GetInputPins",
             "GetOutputPins"
-        ]
-    },
-    "FacsImportData": {
-        "Name": "FacsImportData",
-        "Superclass": "BaseImportData",
-        "Properties": [
-            
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            
         ]
     },
     "BaseWrap": {
@@ -14703,6 +14717,34 @@
             "GetVertices",
             "IsHSRReady",
             "ModifyVertices"
+        ]
+    },
+    "AudioDeviceInput": {
+        "Name": "AudioDeviceInput",
+        "Superclass": "Instance",
+        "Properties": [
+            "AccessList",
+            "AccessType",
+            "Active",
+            "DictationEnabled",
+            "EchoCancellation",
+            "GainControl",
+            "IsReady",
+            "Muted",
+            "MutedByLocalUser",
+            "NoiseSuppression",
+            "Player",
+            "Volume"
+        ],
+        "Events": [
+            "WiringChanged"
+        ],
+        "Methods": [
+            "GetConnectedWires",
+            "GetInputPins",
+            "GetOutputPins",
+            "GetUserIdAccessList",
+            "SetUserIdAccessList"
         ]
     },
     "AlignOrientation": {
@@ -14742,32 +14784,22 @@
             
         ]
     },
-    "AudioDeviceInput": {
-        "Name": "AudioDeviceInput",
-        "Superclass": "Instance",
+    "BubbleChatMessageProperties": {
+        "Name": "BubbleChatMessageProperties",
+        "Superclass": "TextChatMessageProperties",
         "Properties": [
-            "AccessList",
-            "AccessType",
-            "Active",
-            "DictationEnabled",
-            "EchoCancellation",
-            "GainControl",
-            "IsReady",
-            "Muted",
-            "MutedByLocalUser",
-            "NoiseSuppression",
-            "Player",
-            "Volume"
+            "BackgroundColor3",
+            "BackgroundTransparency",
+            "FontFace",
+            "TailVisible",
+            "TextColor3",
+            "TextSize"
         ],
         "Events": [
-            "WiringChanged"
+            
         ],
         "Methods": [
-            "GetConnectedWires",
-            "GetInputPins",
-            "GetOutputPins",
-            "GetUserIdAccessList",
-            "SetUserIdAccessList"
+            
         ]
     },
     "GuiBase3d": {
@@ -14800,55 +14832,6 @@
             
         ]
     },
-    "AvatarAccessoryRules": {
-        "Name": "AvatarAccessoryRules",
-        "Superclass": "Instance",
-        "Properties": [
-            "AccessoryMode",
-            "CustomAccessoryMode",
-            "CustomBackAccessoryEnabled",
-            "CustomBackAccessoryId",
-            "CustomFaceAccessoryEnabled",
-            "CustomFaceAccessoryId",
-            "CustomFrontAccessoryEnabled",
-            "CustomFrontAccessoryId",
-            "CustomHairAccessoryEnabled",
-            "CustomHairAccessoryId",
-            "CustomHeadAccessoryEnabled",
-            "CustomHeadAccessoryId",
-            "CustomNeckAccessoryEnabled",
-            "CustomNeckAccessoryId",
-            "CustomShoulderAccessoryEnabled",
-            "CustomShoulderAccessoryId",
-            "CustomWaistAccessoryEnabled",
-            "CustomWaistAccessoryId",
-            "EnableEmissives",
-            "EnableSound",
-            "EnableVFX",
-            "LimitBounds",
-            "LimitMethod"
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            "willRemoveAccessory"
-        ]
-    },
-    "PlayerDataRecordConfig": {
-        "Name": "PlayerDataRecordConfig",
-        "Superclass": "Instance",
-        "Properties": [
-            "RecordName"
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            "GetDefaultValue",
-            "SetDefaultValue"
-        ]
-    },
     "Clothing": {
         "Name": "Clothing",
         "Superclass": "CharacterAppearance",
@@ -14866,6 +14849,20 @@
             
         ]
     },
+    "PlayerDataRecordConfig": {
+        "Name": "PlayerDataRecordConfig",
+        "Superclass": "Instance",
+        "Properties": [
+            "RecordName"
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            "GetDefaultValue",
+            "SetDefaultValue"
+        ]
+    },
     "NetworkClient": {
         "Name": "NetworkClient",
         "Superclass": "NetworkPeer",
@@ -14878,6 +14875,23 @@
         ],
         "Methods": [
             
+        ]
+    },
+    "AnimatedImageService": {
+        "Name": "AnimatedImageService",
+        "Superclass": "Instance",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            "GetFrameNames",
+            "GetTrack",
+            "GetTracksChanged",
+            "Prewarm",
+            "UnloadTracks"
         ]
     },
     "NetworkServer": {
@@ -15067,11 +15081,16 @@
             "FindPartOnParabola"
         ]
     },
-    "CookiesService": {
-        "Name": "CookiesService",
-        "Superclass": "Instance",
+    "Motor6D": {
+        "Name": "Motor6D",
+        "Superclass": "Motor",
         "Properties": [
-            
+            "ChildName",
+            "EnableSkinning",
+            "ParentName",
+            "ReplicateCurrentAngle6D",
+            "ReplicateCurrentOffset6D",
+            "Transform"
         ],
         "Events": [
             
@@ -15123,20 +15142,20 @@
             "Clear"
         ]
     },
-    "Motor": {
-        "Name": "Motor",
-        "Superclass": "JointInstance",
+    "ModuleScript": {
+        "Name": "ModuleScript",
+        "Superclass": "LuaSourceContainer",
         "Properties": [
-            "CurrentAngle",
-            "DesiredAngle",
-            "MaxVelocity",
-            "ReplicateCurrentAngle"
+            "Confidential",
+            "LinkedSource",
+            "Source",
+            "UnrestrictedRequireAllowed"
         ],
         "Events": [
             
         ],
         "Methods": [
-            "SetDesiredAngle"
+            
         ]
     },
     "FacialAgeEstimationService": {
@@ -15231,20 +15250,26 @@
             
         ]
     },
-    "ModuleScript": {
-        "Name": "ModuleScript",
-        "Superclass": "LuaSourceContainer",
+    "FaceAnimatorService": {
+        "Name": "FaceAnimatorService",
+        "Superclass": "Instance",
         "Properties": [
-            "Confidential",
-            "LinkedSource",
-            "Source",
-            "UnrestrictedRequireAllowed"
+            "AudioAnimationEnabled",
+            "FaceTrackingStatusEnum",
+            "FlipHeadOrientation",
+            "VideoAnimationEnabled"
         ],
         "Events": [
-            
+            "TrackerError",
+            "TrackerPrompt"
         ],
         "Methods": [
-            
+            "GetTrackerLodController",
+            "Init",
+            "IsStarted",
+            "Start",
+            "Step",
+            "Stop"
         ]
     },
     "ClientStorageService": {
@@ -15278,26 +15303,22 @@
             "EvaluateAsync"
         ]
     },
-    "FaceAnimatorService": {
-        "Name": "FaceAnimatorService",
+    "MemoryStoreSortedMap": {
+        "Name": "MemoryStoreSortedMap",
         "Superclass": "Instance",
         "Properties": [
-            "AudioAnimationEnabled",
-            "FaceTrackingStatusEnum",
-            "FlipHeadOrientation",
-            "VideoAnimationEnabled"
+            
         ],
         "Events": [
-            "TrackerError",
-            "TrackerPrompt"
+            
         ],
         "Methods": [
-            "GetTrackerLodController",
-            "Init",
-            "IsStarted",
-            "Start",
-            "Step",
-            "Stop"
+            "GetAsync",
+            "GetRangeAsync",
+            "GetSizeAsync",
+            "RemoveAsync",
+            "SetAsync",
+            "UpdateAsync"
         ]
     },
     "AnimationClipProvider": {
@@ -15323,8 +15344,8 @@
             "GetClipEvaluatorAsync"
         ]
     },
-    "MemoryStoreSortedMap": {
-        "Name": "MemoryStoreSortedMap",
+    "MemoryStoreService": {
+        "Name": "MemoryStoreService",
         "Superclass": "Instance",
         "Properties": [
             
@@ -15333,12 +15354,10 @@
             
         ],
         "Methods": [
-            "GetAsync",
-            "GetRangeAsync",
-            "GetSizeAsync",
-            "RemoveAsync",
-            "SetAsync",
-            "UpdateAsync"
+            "GetDistributedCounter",
+            "GetHashMap",
+            "GetQueue",
+            "GetSortedMap"
         ]
     },
     "ControllerSensor": {
@@ -15547,8 +15566,8 @@
             
         ]
     },
-    "MemoryStoreQueue": {
-        "Name": "MemoryStoreQueue",
+    "MemoryStoreHashMap": {
+        "Name": "MemoryStoreHashMap",
         "Superclass": "Instance",
         "Properties": [
             
@@ -15557,10 +15576,11 @@
             
         ],
         "Methods": [
-            "AddAsync",
-            "GetSizeAsync",
-            "ReadAsync",
-            "RemoveAsync"
+            "GetAsync",
+            "ListItemsAsync",
+            "RemoveAsync",
+            "SetAsync",
+            "UpdateAsync"
         ]
     },
     "Selection": {
@@ -15587,25 +15607,24 @@
             "SetTerrainSelectionHack"
         ]
     },
-    "MemoryStoreDistributedCounter": {
-        "Name": "MemoryStoreDistributedCounter",
-        "Superclass": "Instance",
-        "Properties": [
-            
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            "GetAsync",
-            "IncrementAsync"
-        ]
-    },
     "BlurEffect": {
         "Name": "BlurEffect",
         "Superclass": "PostEffect",
         "Properties": [
             "Size"
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
+        ]
+    },
+    "FlagStandService": {
+        "Name": "FlagStandService",
+        "Superclass": "Instance",
+        "Properties": [
+            
         ],
         "Events": [
             
@@ -15644,19 +15663,6 @@
             "EnableGamepadCursor",
             "GetGamepadCursorPosition",
             "SetGamepadCursorPosition"
-        ]
-    },
-    "FlagStandService": {
-        "Name": "FlagStandService",
-        "Superclass": "Instance",
-        "Properties": [
-            
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            
         ]
     },
     "AnimationTrack": {
@@ -15698,6 +15704,23 @@
             "UpdateGraphNodeProperty"
         ]
     },
+    "AppUpdateService": {
+        "Name": "AppUpdateService",
+        "Superclass": "Instance",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            "CanPerformBinaryUpdate",
+            "CheckForUpdate",
+            "GetProtocolLaunchUpdateName",
+            "GetProtocolLaunchUpdateType",
+            "PerformManagedUpdate"
+        ]
+    },
     "CompressorSoundEffect": {
         "Name": "CompressorSoundEffect",
         "Superclass": "SoundEffect",
@@ -15716,21 +15739,24 @@
             
         ]
     },
-    "AppUpdateService": {
-        "Name": "AppUpdateService",
+    "FloatCurve": {
+        "Name": "FloatCurve",
         "Superclass": "Instance",
         "Properties": [
-            
+            "Length",
+            "ValuesAndTimes"
         ],
         "Events": [
             
         ],
         "Methods": [
-            "CanPerformBinaryUpdate",
-            "CheckForUpdate",
-            "GetProtocolLaunchUpdateName",
-            "GetProtocolLaunchUpdateType",
-            "PerformManagedUpdate"
+            "GetKeyAtIndex",
+            "GetKeyIndicesAtTime",
+            "GetKeys",
+            "GetValueAtTime",
+            "InsertKey",
+            "RemoveKeyAtIndex",
+            "SetKeys"
         ]
     },
     "RomarkService": {
@@ -15744,29 +15770,6 @@
         ],
         "Methods": [
             "EndRemoteRomarkTest"
-        ]
-    },
-    "CommerceService": {
-        "Name": "CommerceService",
-        "Superclass": "Instance",
-        "Properties": [
-            
-        ],
-        "Events": [
-            "BenefitStatusReceived",
-            "FetchReceipt",
-            "InExperienceBrowserRequested",
-            "PromptCommerceProductPurchaseFinished",
-            "PromptCommerceProductPurchaseRequested",
-            "PurchaseBrowserClosed"
-        ],
-        "Methods": [
-            "PromptCommerceProductPurchase",
-            "PromptRealWorldCommerceBrowser",
-            "SignalPromptCommerceProductPurchaseFinished",
-            "GetCommerceProductInfoAsync",
-            "PrepareCommerceProductPurchase",
-            "UserEligibleForRealWorldCommerceAsync"
         ]
     },
     "GeneratedFolder": {
@@ -15839,6 +15842,21 @@
             "CreateExpression"
         ]
     },
+    "AudioDeviceOutput": {
+        "Name": "AudioDeviceOutput",
+        "Superclass": "Instance",
+        "Properties": [
+            "Player"
+        ],
+        "Events": [
+            "WiringChanged"
+        ],
+        "Methods": [
+            "GetConnectedWires",
+            "GetInputPins",
+            "GetOutputPins"
+        ]
+    },
     "TerrainIterateOperation": {
         "Name": "TerrainIterateOperation",
         "Superclass": "Object",
@@ -15850,19 +15868,6 @@
         ],
         "Methods": [
             "CommitBlock"
-        ]
-    },
-    "DockWidgetPluginGui": {
-        "Name": "DockWidgetPluginGui",
-        "Superclass": "PluginGui",
-        "Properties": [
-            "HostWidgetWasRestored"
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            "RequestRaise"
         ]
     },
     "LoginService": {
@@ -15878,6 +15883,19 @@
         "Methods": [
             "Logout",
             "PromptLogin"
+        ]
+    },
+    "CustomSoundEffect": {
+        "Name": "CustomSoundEffect",
+        "Superclass": "SoundEffect",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
         ]
     },
     "SpringConstraint": {
@@ -15903,9 +15921,9 @@
             
         ]
     },
-    "LocalScript": {
-        "Name": "LocalScript",
-        "Superclass": "Script",
+    "GamePassService": {
+        "Name": "GamePassService",
+        "Superclass": "Instance",
         "Properties": [
             
         ],
@@ -15913,7 +15931,7 @@
             
         ],
         "Methods": [
-            
+            "PlayerHasPass"
         ]
     },
     "MemStorageService": {
@@ -15995,19 +16013,6 @@
             
         ]
     },
-    "ChannelSelectorSoundEffect": {
-        "Name": "ChannelSelectorSoundEffect",
-        "Superclass": "CustomSoundEffect",
-        "Properties": [
-            "Channel"
-        ],
-        "Events": [
-            
-        ],
-        "Methods": [
-            
-        ]
-    },
     "DataStoreSetOptions": {
         "Name": "DataStoreSetOptions",
         "Superclass": "Instance",
@@ -16020,6 +16025,19 @@
         "Methods": [
             "GetMetadata",
             "SetMetadata"
+        ]
+    },
+    "InternalMessagingServiceVerifier": {
+        "Name": "InternalMessagingServiceVerifier",
+        "Superclass": "Instance",
+        "Properties": [
+            
+        ],
+        "Events": [
+            
+        ],
+        "Methods": [
+            
         ]
     },
     "InternalMessagingService": {
