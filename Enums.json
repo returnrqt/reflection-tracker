@@ -2802,6 +2802,8 @@
     "Enum.TerrainSolidMergeOperation.Intersect",
     "Enum.TerrainSolidMergeOperation.Cut",
     "Enum.TerrainSolidMergeOperation.Place",
+    "Enum.TextChannelDisplayMode.AllTextChannels",
+    "Enum.TextChannelDisplayMode.DefaultTextChannels",
     "Enum.TextChatMessageStatus.Unknown",
     "Enum.TextChatMessageStatus.Success",
     "Enum.TextChatMessageStatus.Sending",
