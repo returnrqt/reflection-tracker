@@ -1745,7 +1745,6 @@
     "Enum.KeywordFilterType.Include",
     "Enum.KeywordFilterType.Exclude",
     "Enum.KnownWindow.Main",
-    "Enum.Language.Default",
     "Enum.LeftRight.Left",
     "Enum.LeftRight.Center",
     "Enum.LeftRight.Right",
