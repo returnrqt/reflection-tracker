@@ -3952,6 +3952,7 @@
             "SaveScreenshotCapture",
             "SaveVideoCaptureToExternalStorage",
             "StopVideoCapture",
+            "StopVideoCaptureForMCP",
             "StopVideoCaptureInternal",
             "TakeScreenshotCaptureAsync",
             "UploadCaptureAndPostMoment",
@@ -3974,6 +3975,7 @@
             "StartUploadCaptureAsync",
             "StartUploadCaptureForSupportTicketAsync",
             "StartVideoCaptureAsync",
+            "StartVideoCaptureForMCPAsync",
             "StartVideoCaptureInternalAsync",
             "UploadCaptureAsync",
             "UploadPostAsync"
