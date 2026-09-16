@@ -2758,6 +2758,7 @@
     "Enum.TeleportMethod.TeleportToInstanceBack",
     "Enum.TeleportMethod.TeleportUnknown",
     "Enum.TeleportMethod.Teleport",
+    "Enum.TeleportMethod.TeleportSwitchServer",
     "Enum.TeleportResult.Success",
     "Enum.TeleportResult.Failure",
     "Enum.TeleportResult.GameNotFound",
