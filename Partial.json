@@ -988,6 +988,7 @@
             "Direction1DState",
             "Direction2DState",
             "Direction3DState",
+            "DisplayName",
             "Enabled",
             "PreferredBinding",
             "Type",
@@ -8973,6 +8974,7 @@
         "Methods": [
             "FetchAssetQualitySummaryFromGltfAsync",
             "FetchAssetQualitySummaryFromJobIdAsync",
+            "FetchAssetQualitySummaryFromJobIdV2Async",
             "FetchAssetQualityValidationEntriesFromModelsAsync",
             "FetchAssetQualityValidationRawFromModelsAsync",
             "FetchAssetQualityVisualizationDataFromUrlAsync",
@@ -9510,6 +9512,7 @@
             "Teleport",
             "TeleportCancel",
             "TeleportReconnect",
+            "TeleportSwitchServer",
             "TeleportToPlaceInstance",
             "TeleportToPrivateServer",
             "TeleportToSpawnByName",
